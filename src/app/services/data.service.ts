@@ -7,14 +7,15 @@ import { MenuItem } from '../interface/menuItem';
 })
 export class DataService {
 
+  enviro
   constructor( private http: HttpClient, ) { }
 
   getMenuOpts() {
-    return this.http.get<MenuItem[]>('/assets/data/menu-opts.json');
+    return this.http.get<MenuItem[]>('assets/data/menu-opts.json');
   }
 
   getPersonalData() {
-    return this.http.get<any>('/assets/data/personal-data.json');
+    return this.http.get<any>('assets/data/personal-data.json');
   }
 
   uniqueId() {    
