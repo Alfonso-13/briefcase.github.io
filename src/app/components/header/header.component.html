@@ -1,0 +1,9 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button *ngIf="!backButton"></ion-menu-button>
+      <ion-back-button *ngIf="backButton" [defaultHref]="defaultH"  color="primary" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>

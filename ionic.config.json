@@ -1,0 +1,7 @@
+{
+  "name": "briefcase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

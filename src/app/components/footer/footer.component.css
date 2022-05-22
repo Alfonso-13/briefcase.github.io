@@ -1,0 +1,21 @@
+mat-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 5%;
+}
+
+.espacio {
+    flex: 1 1 auto;
+}
+
+span {
+    font-size: small;
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */;
+}
