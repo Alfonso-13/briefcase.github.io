@@ -36,3 +36,26 @@
 .swiper-v {
   background: #eee;
 }
+
+
+
+ /* change the size of the bullet and active color */
+
+ .swiper-pagination-bullet {
+  background-color: blue;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* change color of next 2 bullets in sequence to white*/
+
+.swiper-pagination-bullet-active-next, .swiper-pagination-bullet-active-next-next {
+background-color: white;
+}
+
+/* change color of previous bullet to white*/
+
+.swiper-pagination-bullet-active-prev {
+background-color: white;
+}
