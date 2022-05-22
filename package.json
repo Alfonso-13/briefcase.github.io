@@ -2,7 +2,7 @@
   "name": "briefcase",
   "version": "0.0.1",
   "author": "Neri Alfonso Menchaca Castillo",
-  "homepage": "https://github.com/Alfonso-13/",
+  "homepage": "https://github.com/Alfonso-13/briefcase.github.io/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
