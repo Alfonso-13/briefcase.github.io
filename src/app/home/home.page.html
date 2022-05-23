@@ -1,15 +1,16 @@
 <app-header title="Home"></app-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" >
   <swiper
   class="mySwiper swiper-h"
   [spaceBetween]="50"
   [pagination]="{
     clickable: true
   }"
+  [navigation]="true"
 >
-  <ng-template swiperSlide>
-    <app-presentation></app-presentation>
+  <ng-template swiperSlide >
+    <app-presentation class="card-full"></app-presentation>
   </ng-template>
   <ng-template swiperSlide>
     <swiper

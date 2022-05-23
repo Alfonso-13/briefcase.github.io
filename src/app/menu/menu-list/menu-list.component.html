@@ -1,6 +1,0 @@
-<ion-menu-toggle auto-hide="false" *ngFor="let p of pages | async">
-  <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false">
-    <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-    <ion-label>{{ p.name }}</ion-label>
-  </ion-item>
-</ion-menu-toggle>

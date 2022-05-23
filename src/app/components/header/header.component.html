@@ -1,9 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button *ngIf="!backButton"></ion-menu-button>
-      <ion-back-button *ngIf="backButton" [defaultHref]="defaultH"  color="primary" text=""></ion-back-button>
-    </ion-buttons>
-    <ion-title class="ion-text-capitalize">{{title}}</ion-title>
+    <ion-chip>
+      <ion-avatar>
+        <img *ngIf="personalData?.personalFiles?.avatarPath" [src]="personalData?.personalFiles?.avatarPath">
+        <img *ngIf="!personalData?.personalFiles?.avatarPath" src="assets/img/avatar.svg">
+      </ion-avatar>
+      <ion-label class="ion-text-capitalize">{{personalData?.name}}</ion-label>
+    </ion-chip>
+    <ion-buttons slot="end">
+      <ion-button id="linkedinButton" [href]="'mailto:'+personalData?.email">
+        <ion-icon name="mail"></ion-icon>
+    </ion-button>      
+      <ion-button id="linkedinButton" [href]="personalData?.socialMedia?.urlLinkedin" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+      </ion-button>
+      <ion-button id="gitButton" [href]="personalData?.socialMedia?.urlGithub" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+      </ion-button>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>

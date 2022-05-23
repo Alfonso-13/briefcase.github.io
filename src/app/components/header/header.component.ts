@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { PersonalData } from 'src/app/interface/personal-data';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent{
 
-  @Input() title;
-  @Input() backButton: boolean = false;
-  @Input() defaultH: string = '/';
+  @Input() personalData: PersonalData;
 
-  constructor() { }
 }

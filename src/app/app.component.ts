@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { LoadingController, Platform } from '@ionic/angular';
+import { Platform } from '@ionic/angular';
 import { DataService } from './services/data.service';
-//import { Device } from '@capacitor/device';
-import { MenuItem } from './interface/menuItem';
 import { Observable } from 'rxjs';
+import { PersonalData } from './interface/personal-data';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +10,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  componentes: Observable<MenuItem[]>;
-  personalData: any;
-
+  
+  personalData: PersonalData;
+  
   constructor(
     private platform: Platform,    
     private dataService: DataService
@@ -23,7 +22,6 @@ export class AppComponent {
 
   async initializeApp() {
     this.platform.ready().then( async () => {
-      this.componentes = this.dataService.getMenuOpts();      
        this.dataService.getPersonalData().subscribe(
          response => {          
           this.personalData = response;
