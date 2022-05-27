@@ -112,7 +112,16 @@ __webpack_require__.r(__webpack_exports__);
 // install Swiper modules
 swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination]);
 let HomePage = class HomePage {
-    constructor() { }
+    constructor() {
+        this.pagination = {
+            clickable: true,
+            renderBullet: function (index, className) {
+                console.log('index', index);
+                console.log('className', className);
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        };
+    }
 };
 HomePage.ctorParameters = () => [];
 HomePage = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
@@ -144,7 +153,7 @@ module.exports = "/**\n * Swiper 8.1.5\n * Most modern mobile touch slider and f
   \************************************************/
 /***/ ((module) => {
 
-module.exports = "<app-header title=\"Home\"></app-header>\n\n<ion-content [fullscreen]=\"true\" >\n  <swiper\n  class=\"mySwiper swiper-h\"\n  [spaceBetween]=\"50\"\n  [pagination]=\"{\n    clickable: true\n  }\"\n  [navigation]=\"true\"\n>\n  <ng-template swiperSlide >\n    <app-presentation class=\"card-full\"></app-presentation>\n  </ng-template>\n  <ng-template swiperSlide>\n    <swiper\n      class=\"mySwiper2 swiper-v\"\n      [direction]=\"'vertical'\"\n      [spaceBetween]=\"50\"\n      [pagination]=\"{\n        clickable: true\n      }\"\n    >\n      <ng-template swiperSlide>Vertical Slide 1        \n      </ng-template>\n      <ng-template swiperSlide>Vertical Slide 2</ng-template>\n      <ng-template swiperSlide>Vertical Slide 3</ng-template>\n      <ng-template swiperSlide>Vertical Slide 4</ng-template>\n      <ng-template swiperSlide>Vertical Slide 5</ng-template>\n    </swiper>\n  </ng-template>\n  <ng-template swiperSlide>Horizontal Slide 3</ng-template>\n  <ng-template swiperSlide>Horizontal Slide 4</ng-template>\n</swiper>\n</ion-content>\n";
+module.exports = "<app-header title=\"Home\"></app-header>\n\n<ion-content [fullscreen]=\"true\" >\n  <swiper\n  class=\"mySwiper swiper-h\"\n  [spaceBetween]=\"50\"\n  [pagination]=\"pagination\"\n  [navigation]=\"true\"\n>\n  <ng-template swiperSlide >\n    <app-presentation class=\"card-full\"></app-presentation>\n  </ng-template>\n  <ng-template swiperSlide>\n    <swiper\n      class=\"mySwiper2 swiper-v\"\n      [direction]=\"'vertical'\"\n      [spaceBetween]=\"50\"\n      [pagination]=\"{\n        clickable: true\n      }\"\n    >\n      <ng-template swiperSlide>Vertical Slide 1        \n      </ng-template>\n      <ng-template swiperSlide>Vertical Slide 2</ng-template>\n      <ng-template swiperSlide>Vertical Slide 3</ng-template>\n      <ng-template swiperSlide>Vertical Slide 4</ng-template>\n      <ng-template swiperSlide>Vertical Slide 5</ng-template>\n    </swiper>\n  </ng-template>\n  <ng-template swiperSlide>Horizontal Slide 3</ng-template>\n  <ng-template swiperSlide>Horizontal Slide 4</ng-template>\n</swiper>\n</ion-content>\n";
 
 /***/ }),
 
