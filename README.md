@@ -76,7 +76,7 @@ Navigate to the file package.json to chang the base directory `ng build --base-h
 Navigate in the terminal to your project directory and execute `ng build --base-href=/<repository>/`
 
 ```
-npm run:build
+npm run build
 ...
 ```
 
