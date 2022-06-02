@@ -77,7 +77,6 @@ let AppComponent = class AppComponent {
             this.platform.ready().then(() => (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
                 this.dataService.getPersonalData().subscribe(response => {
                     this.personalData = response;
-                    console.log('this.personalData', this.personalData);
                 });
             }));
         });
@@ -377,7 +376,6 @@ let KnowledgeComponent = class KnowledgeComponent {
             this.knowledgeCards.forEach(card => {
                 this.listCards.push(this.knowledgeDatatoCard(card));
             });
-            console.log('this.knowledgeCards', this.knowledgeCards);
         });
     }
     knowledgeDatatoCard(data) {
@@ -575,8 +573,6 @@ let EducationComponent = class EducationComponent {
             this.educationCards.forEach(educationCard => {
                 this.listCards.push(this.educationDatatoCard(educationCard));
             });
-            console.log('this.educationCards', this.educationCards);
-            console.log('this.listCards', this.listCards);
         });
     }
     educationDatatoCard(data) {
