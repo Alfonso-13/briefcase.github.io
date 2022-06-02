@@ -24,8 +24,6 @@ export class EducationComponent implements OnInit {
         this.educationCards.forEach(educationCard => {
           this.listCards.push(this.educationDatatoCard(educationCard));
         });
-        console.log('this.educationCards', this.educationCards);
-        console.log('this.listCards', this.listCards);
       }
     );
   }

@@ -24,7 +24,6 @@ export class KnowledgeComponent implements OnInit {
         this.knowledgeCards.forEach(card => {
           this.listCards.push(this.knowledgeDatatoCard(card));
         });
-        console.log('this.knowledgeCards', this.knowledgeCards);
       }
     );
   }

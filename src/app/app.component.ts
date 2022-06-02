@@ -25,7 +25,6 @@ export class AppComponent {
        this.dataService.getPersonalData().subscribe(
          response => {          
           this.personalData = response;
-          console.log('this.personalData', this.personalData);
          }
        );
     });
