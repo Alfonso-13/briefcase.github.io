@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Front-End",
+    "image": "assets/img/Skills/FrontEnd.png",
+    "knowledge": [
+      {
+        "name": "Basics",
+        "experience": [
+          { "title": "HTML", "time": "7 YEARS"},
+          { "title": "CSS", "time": "1 YEAR"},
+          { "title": "JAVASCRIPT", "time": "7 YEARS"}
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "experience": [
+          { "title": "C#", "time": "7 YEARS"},
+          { "title": "VB .NET", "time": "7 YEARS"},
+          { "title": "ANGULAR", "time": "2 YEARS"},
+          { "title": "REACT JS", "time": "6 MONTHS"},
+          { "title": "ANGULAR JS", "time": "6 MONTHS"},
+          { "title": "PHASER", "time": "6 MONTHS"}
+        ]
+      },
+      {
+        "name": "Styles",
+        "experience": [
+          { "title": "BOOSTRAP", "time": "2 YEARS"},
+          { "title": "MATERIAL UI", "time": "1 YEAR"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Back-End",
+    "image": "assets/img/Skills/BackEnd.png",
+    "knowledge": [
+      {
+        "name": "Technology",
+        "experience": [
+          { "title": "ASP .NET", "time": "7 YEARS"},
+          { "title": ".NET CORE", "time": "2 YEARS"},
+          { "title": "NODE", "time": "2 YEARS"},
+          { "title": "JAVA (SPRING)", "time": "2 YEARS"},
+          { "title": "PHP", "time": "6 MONTHS"}
+        ]
+      }      
+    ]
+  },
+  {
+    "name": "Database",
+    "image": "assets/img/Skills/Database.png",
+    "knowledge": [
+      {
+        "name": "RDBMS",
+        "experience": [
+          { "title": "MSSQL", "time": "7 YEARS"},
+          { "title": "MySQL", "time": "1 YEAR"},
+          { "title": "ORACLE", "time": "1 YEAR"},
+          { "title": "INFORMIX", "time": "6 MONTHS"}
+        ]
+      },
+      {
+        "name": "NoSQL",
+        "experience": [
+          { "title": "MONGO DB", "time": "6 MONTHS"},
+          { "title": "FIREBASE DB", "time": "6 MONTHS"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dev Ops",
+    "image": "assets/img/Skills/DevOps.png",
+    "knowledge": [
+      {
+        "name": "Infrastructure",
+        "experience": [
+          { "title": "AZURE", "time": "2 YEARS"},
+          { "title": "FIREBASE", "time": "1 YEAR"},
+          { "title": "HEROKU", "time": "1 YEAR"},
+          { "title": "MICROSOFT TFS", "time": "1 YEAR"}
+        ]
+      },
+      {
+        "name": "AUTOMATION",
+        "experience": [
+          { "title": "JENKINS", "time": "1 YEAR"}
+        ]
+      },
+      {
+        "name": "VIRTUALIZATION",
+        "experience": [
+          { "title": "VMWARE", "time": "6 MONTHS"},
+          { "title": "VIRTUALBOX", "time": "6 MONTHS"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mobile",
+    "image": "assets/img/Skills/Mobile.png",
+    "knowledge": [
+      {
+        "name": "Android",
+        "experience": [
+          { "title": "JAVA", "time": "1 YEAR"},
+          { "title": "SDK", "time": "6 MONTHS"}          
+        ]
+      },
+      {
+        "name": "Cross Platform",
+        "experience": [
+          { "title": "IONIC", "time": "1 YEAR"},
+          { "title": "PWA", "time": "6 MONTHS"},
+          { "title": "XAMARIN", "time": "6 MONTHS"},
+          { "title": "UNITY", "time": "6 MONTHS"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Methodology",
+    "image": "assets/img/Skills/Methodology.png",
+    "knowledge": [
+      {
+        "experience": [
+          { "title": "WATERFALL", "time": "7 YEARS"},
+          { "title": "CMMI DEV", "time": "2 YEARS"},
+          { "title": "AGILE (SCRUM)", "time": "1 YEAR"},
+          { "title": "SPIRAL", "time": "1 YEAR"},
+          { "title": "KANBAN", "time": "1 YEAR"}
+        ]
+      }
+    ]
+  }
+]

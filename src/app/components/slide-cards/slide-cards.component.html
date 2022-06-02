@@ -1,0 +1,22 @@
+<h1 class="h1">{{title}}</h1>
+<swiper
+  class="mySwiper swiper-h"
+  [spaceBetween]="50"
+  [pagination]="pagination"
+  [navigation]="true"
+> 
+  <ng-template swiperSlide ngIf="listCards">
+    <swiper
+      [direction]="'vertical'"
+      [spaceBetween]="50"
+      [pagination]="{
+        clickable: true
+      }"
+    >
+      <ng-template swiperSlide *ngFor="let card of listCards; let index=index">        
+        <app-card [cardData]="card" class="card-full"></app-card>
+      </ng-template>      
+    </swiper>
+  </ng-template>
+
+</swiper>

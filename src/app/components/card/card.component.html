@@ -1,0 +1,28 @@
+<div *ngIf="cardData">
+    <h1 *ngIf="cardData.header">{{cardData.header}}</h1>
+    <ion-avatar>
+        <img *ngIf="cardData.avatarImgPath" [src]="cardData.avatarImgPath">
+    </ion-avatar>
+    <ion-card-header *ngIf="cardData.title || cardData.subtitle">
+        <ion-card-subtitle *ngIf="cardData.subtitle">{{cardData.subtitle}}</ion-card-subtitle>
+        <ion-card-title *ngIf="cardData.title">{{cardData.title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content *ngIf="cardData.content && !cardData.contentHtml">
+        {{cardData.content}}
+    </ion-card-content>
+    <ion-card-content *ngIf="cardData.contentHtml">
+        <div [outerHTML]="cardData.contentHtml"></div>
+    </ion-card-content>
+    <ion-list *ngIf="cardData.listChips">
+        <ion-list *ngFor="let item of cardData.listChips">
+            <ion-label>{{item.name | uppercase}}</ion-label> <br>
+            <ion-chip color="tertiary" *ngFor="let chip of item.chips">
+                <small>
+                    <ion-label color="primary">{{chip.title}}</ion-label>
+                    &nbsp;&nbsp;
+                    <ion-label color="secondary">{{chip.subtitle}}</ion-label>
+                </small>
+            </ion-chip>
+        </ion-list>
+    </ion-list>
+</div>

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Computer Systems Engineer",
+    "title": "Certificated",
+    "subtitle": "Facultad de Sistemas | UAdeC - 2008 - 2014 Saltillo, Coahuila.",
+    "description": "<p> <b> Title & Certificate </b></p> <br> <p> <b> Languages: </b><ul><li>English Intermediate (B2)</li><li>Spanish Native</li></ul>",
+    "image": "assets/img/sistemasUadeC.webp"
+  },
+  {
+    "name": "Udemy",
+    "title": "Courses",
+    "subtitle": "@neri_menchaca",
+    "description": "<ul><li>Ionic 6+</li><li>Angular 12 y ASP.NET Core 5</li><li>React JS</li></ul><br><a href=\"https://www.udemy.com/user/neri-menchaca/\" target=\"_blank\">See more on udemy.com...</a>",
+    "image": "assets/img/udemy.jpg"
+  },
+  {
+    "name": "Hackerrank",
+    "title": "Certificated",
+    "subtitle": "@neri_menchaca",
+    "description": "<ul><li>Sql (Basic)</li><li>Sql (Intermediate)</li></ul><br><a href=\"https://www.hackerrank.com/neri_menchaca\" target=\"_blank\">See more on hackerrank.com...</a>",
+    "image": "assets/img/HackerRank.png"
+  }
+]

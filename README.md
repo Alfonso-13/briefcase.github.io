@@ -69,14 +69,19 @@ origin	https://github.com/Alfonso-13/briefcase.github.io.git (fetch)
 origin	https://github.com/Alfonso-13/briefcase.github.io.git (push)
 ```
 
+## Config your package.json
+Navigate to the file package.json to chang the base directory `ng build --base-href=/<repository>/`
+
 ## Build your ionic app
 Navigate in the terminal to your project directory and execute `ng build --base-href=/<repository>/`
 
 ```
-ng build --base-href=/briefcase.github.io/
+npm run:build
 ...
 ```
+
 This will create the www folder with output bundles for your ionic application.
+This create the file .nojekyll to the configuration GitHub Pages settings
 
 ## Add `angular-cli-ghpages` npm module to your project.
 
@@ -103,14 +108,5 @@ $ npx angular-cli-ghpages --dir=www
 - Make sure `Source` is set to `gh-pages` branch. 
 - Your site is published at https://github.com/Alfonso-13/briefcase.github.io/
 
-> Your site may still not be accessible, because github pages by default looks for sites made with jekyll.
-
-## **Important:** Add .nojekyll file to root of your `gh-pages` branch
-
-It is now possible to completely bypass Jekyll processing on GitHub Pages by creating a file named .nojekyll in the root of your pages repo and pushing it to GitHub.
-
-> Site is accessible at https://github.com/Alfonso-13/briefcase.github.io/
-
-> Note: It may take some time for the application to be become available, since github servers take some time to update the site.
 
 

@@ -6,10 +6,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href=/briefcase.github.io/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postbuild": "npm run copy:Nojekyll",
+    "copy:Nojekyll": "cp -r .nojekyll www || copy /Y .nojekyll www"
   },
   "private": true,
   "dependencies": {

@@ -1,35 +1,17 @@
-<app-header title="Home"></app-header>
-
-<ion-content [fullscreen]="true" >
+<app-header></app-header>
+<ion-content [fullscreen]="true">
   <swiper
-  class="mySwiper swiper-h"
-  [spaceBetween]="50"
-  [pagination]="{
-    clickable: true
-  }"
+  [pagination]="pagination"
   [navigation]="true"
 >
   <ng-template swiperSlide >
-    <app-presentation class="card-full"></app-presentation>
+    <app-presentation #Presentation class="card-full"></app-presentation>
+  </ng-template>
+  <ng-template swiperSlide >
+    <app-education #Education class="card-full"></app-education>
   </ng-template>
   <ng-template swiperSlide>
-    <swiper
-      class="mySwiper2 swiper-v"
-      [direction]="'vertical'"
-      [spaceBetween]="50"
-      [pagination]="{
-        clickable: true
-      }"
-    >
-      <ng-template swiperSlide>Vertical Slide 1        
-      </ng-template>
-      <ng-template swiperSlide>Vertical Slide 2</ng-template>
-      <ng-template swiperSlide>Vertical Slide 3</ng-template>
-      <ng-template swiperSlide>Vertical Slide 4</ng-template>
-      <ng-template swiperSlide>Vertical Slide 5</ng-template>
-    </swiper>
+    <app-knowledge #Knowledge class="card-full"></app-knowledge>
   </ng-template>
-  <ng-template swiperSlide>Horizontal Slide 3</ng-template>
-  <ng-template swiperSlide>Horizontal Slide 4</ng-template>
 </swiper>
 </ion-content>
