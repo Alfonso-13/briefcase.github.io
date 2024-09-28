@@ -75,7 +75,7 @@ let AppComponent = class AppComponent {
     initializeApp() {
         return (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
             this.platform.ready().then(() => (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__awaiter)(this, void 0, void 0, function* () {
-                this.dataService.getPersonalData().subscribe(response => {
+                this.dataService.getPersonalData().subscribe((response) => {
                     this.personalData = response;
                 });
             }));
@@ -131,16 +131,14 @@ let AppModule = class AppModule {
 };
 AppModule = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_4__.NgModule)({
-        declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent
-        ],
+        declarations: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
         entryComponents: [],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.BrowserModule,
             _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicModule.forRoot(),
             _app_routing_module__WEBPACK_IMPORTED_MODULE_1__.AppRoutingModule,
             _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClientModule,
-            _components_components_module__WEBPACK_IMPORTED_MODULE_2__.ComponentsModule
+            _components_components_module__WEBPACK_IMPORTED_MODULE_2__.ComponentsModule,
         ],
         providers: [{ provide: _angular_router__WEBPACK_IMPORTED_MODULE_8__.RouteReuseStrategy, useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__.IonicRouteStrategy }],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_0__.AppComponent],
@@ -328,9 +326,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let HeaderComponent = class HeaderComponent {
+    openContactMenu(ev) {
+        this.contactMenu.event = ev;
+        this.contactMenu.present();
+    }
 };
 HeaderComponent.propDecorators = {
-    personalData: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__.Input }]
+    personalData: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__.Input }],
+    contactMenu: [{ type: _angular_core__WEBPACK_IMPORTED_MODULE_2__.ViewChild, args: ['contactMenu', { static: true },] }]
 };
 HeaderComponent = (0,tslib__WEBPACK_IMPORTED_MODULE_3__.__decorate)([
     (0,_angular_core__WEBPACK_IMPORTED_MODULE_2__.Component)({
@@ -455,10 +458,10 @@ let PresentationComponent = class PresentationComponent {
         this.dataService = dataService;
     }
     ngOnInit() {
-        this.dataService.getPresentationData().subscribe(response => {
+        this.dataService.getPresentationData().subscribe((response) => {
             this.presentationData = response;
             this.listCards = [];
-            this.presentationData.forEach(presentationData => {
+            this.presentationData.forEach((presentationData) => {
                 this.listCards.push(this.presentationDataToCard(presentationData));
             });
         });
@@ -469,7 +472,7 @@ let PresentationComponent = class PresentationComponent {
             header: presentationData.header,
             title: presentationData.title,
             subtitle: presentationData.subtitle,
-            content: presentationData.content
+            content: presentationData.content,
         };
     }
 };
@@ -511,7 +514,7 @@ __webpack_require__.r(__webpack_exports__);
 // import Swiper core and required modules
 
 // install Swiper modules
-swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination]);
+swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_2__.Mousewheel]);
 let SlideCardsComponent = class SlideCardsComponent {
     constructor() {
         this.pagination = {
@@ -519,6 +522,9 @@ let SlideCardsComponent = class SlideCardsComponent {
             renderBullet: function (index, className) {
                 return '<span class="' + className + '"></span>"';
             },
+        };
+        this.mousewheel = {
+            forceToAxis: true,
         };
     }
     ngOnInit() { }
@@ -985,7 +991,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /***/ ((module) => {
 
 "use strict";
-module.exports = "ion-card {\n  margin-top: 10px;\n  width: 90%;\n  height: 90%;\n  padding-bottom: 0px !important;\n}\n\nion-avatar {\n  width: 100% !important;\n  height: 100% !important;\n  max-width: 150px !important;\n  max-height: 150px !important;\n}\n\n.card-content-md {\n  padding-bottom: 1px;\n}\n\n.card-md {\n  overflow-y: auto;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhcmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxnQkFBQTtFQUNBLFVBQUE7RUFDQSxXQUFBO0VBQ0EsOEJBQUE7QUFDSjs7QUFFQTtFQUNJLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSwyQkFBQTtFQUNBLDRCQUFBO0FBQ0o7O0FBRUE7RUFDSSxtQkFBQTtBQUNKOztBQUVBO0VBQ0ksZ0JBQUE7QUFDSiIsImZpbGUiOiJjYXJkLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNhcmQge1xyXG4gICAgbWFyZ2luLXRvcDogMTBweDtcclxuICAgIHdpZHRoOiA5MCU7XHJcbiAgICBoZWlnaHQ6IDkwJTsgIFxyXG4gICAgcGFkZGluZy1ib3R0b206IDBweCAhaW1wb3J0YW50OyAgXHJcbn1cclxuXHJcbmlvbi1hdmF0YXIgIHsgICAgIFxyXG4gICAgd2lkdGg6MTAwJSAhaW1wb3J0YW50OyAgXHJcbiAgICBoZWlnaHQgOiAxMDAlICFpbXBvcnRhbnQ7ICBcclxuICAgIG1heC13aWR0aDogMTUwcHggIWltcG9ydGFudDsgIC8vYW55IHNpemVcclxuICAgIG1heC1oZWlnaHQ6IDE1MHB4ICFpbXBvcnRhbnQ7IC8vYW55IHNpemUgXHJcbiAgICB9XHJcblxyXG4uY2FyZC1jb250ZW50LW1kIHtcclxuICAgIHBhZGRpbmctYm90dG9tOiAxcHg7XHJcbn1cclxuXHJcbi5jYXJkLW1kIHtcclxuICAgIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuIl19 */";
+module.exports = "@charset \"UTF-8\";\nion-card {\n  margin-top: 10px;\n  width: 90%;\n  height: 90%;\n  padding-bottom: 0px !important;\n}\nion-avatar {\n  width: 100% !important;\n  height: 100% !important;\n  max-width: 150px !important;\n  max-height: 150px !important;\n}\n.card-content-md {\n  padding-bottom: 1px;\n}\n.card-md {\n  overflow-y: auto;\n}\n@media (max-width: 768px) {\n  .scrollable-content {\n    max-height: 200px;\n    /* Ajusta la altura para móviles */\n    padding: 8px;\n    /* Menor padding en pantallas pequeñas */\n    overflow-y: auto;\n    direction: rtl;\n  }\n\n  /* Personalizando el scrollbar */\n  ::-webkit-scrollbar {\n    width: 10px;\n    /* Ancho del scrollbar */\n  }\n\n  ::-webkit-scrollbar-track {\n    background: #f1f1f1;\n    /* Color del fondo del track */\n    border-radius: 10px;\n    /* Bordes redondeados */\n  }\n\n  ::-webkit-scrollbar-thumb {\n    background: var(--bullet-background-active);\n    /* Color del thumb */\n    border-radius: 10px;\n    /* Bordes redondeados */\n  }\n\n  ::-webkit-scrollbar-thumb:hover {\n    background: #555;\n    /* Color del thumb cuando se pasa el ratón */\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhcmQuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsZ0JBQWdCO0FBQWhCO0VBQ0UsZ0JBQUE7RUFDQSxVQUFBO0VBQ0EsV0FBQTtFQUNBLDhCQUFBO0FBRUY7QUFDQTtFQUNFLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSwyQkFBQTtFQUNBLDRCQUFBO0FBRUY7QUFDQTtFQUNFLG1CQUFBO0FBRUY7QUFDQTtFQUNFLGdCQUFBO0FBRUY7QUFDQTtFQUNFO0lBQ0UsaUJBQUE7SUFBbUIsa0NBQUE7SUFDbkIsWUFBQTtJQUFjLHdDQUFBO0lBQ2QsZ0JBQUE7SUFDQSxjQUFBO0VBSUY7O0VBRkEsZ0NBQUE7RUFDQTtJQUNFLFdBQUE7SUFBYSx3QkFBQTtFQU1mOztFQUhBO0lBQ0UsbUJBQUE7SUFBcUIsOEJBQUE7SUFDckIsbUJBQUE7SUFBcUIsdUJBQUE7RUFRdkI7O0VBTEE7SUFDRSwyQ0FBQTtJQUE2QyxvQkFBQTtJQUM3QyxtQkFBQTtJQUFxQix1QkFBQTtFQVV2Qjs7RUFQQTtJQUNFLGdCQUFBO0lBQWtCLDRDQUFBO0VBV3BCO0FBQ0YiLCJmaWxlIjoiY2FyZC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jYXJkIHtcclxuICBtYXJnaW4tdG9wOiAxMHB4O1xyXG4gIHdpZHRoOiA5MCU7XHJcbiAgaGVpZ2h0OiA5MCU7XHJcbiAgcGFkZGluZy1ib3R0b206IDBweCAhaW1wb3J0YW50O1xyXG59XHJcblxyXG5pb24tYXZhdGFyIHtcclxuICB3aWR0aDogMTAwJSAhaW1wb3J0YW50O1xyXG4gIGhlaWdodDogMTAwJSAhaW1wb3J0YW50O1xyXG4gIG1heC13aWR0aDogMTUwcHggIWltcG9ydGFudDsgLy9hbnkgc2l6ZVxyXG4gIG1heC1oZWlnaHQ6IDE1MHB4ICFpbXBvcnRhbnQ7IC8vYW55IHNpemVcclxufVxyXG5cclxuLmNhcmQtY29udGVudC1tZCB7XHJcbiAgcGFkZGluZy1ib3R0b206IDFweDtcclxufVxyXG5cclxuLmNhcmQtbWQge1xyXG4gIG92ZXJmbG93LXk6IGF1dG87XHJcbn1cclxuXHJcbkBtZWRpYSAobWF4LXdpZHRoOiA3NjhweCkge1xyXG4gIC5zY3JvbGxhYmxlLWNvbnRlbnQge1xyXG4gICAgbWF4LWhlaWdodDogMjAwcHg7IC8qIEFqdXN0YSBsYSBhbHR1cmEgcGFyYSBtw7N2aWxlcyAqL1xyXG4gICAgcGFkZGluZzogOHB4OyAvKiBNZW5vciBwYWRkaW5nIGVuIHBhbnRhbGxhcyBwZXF1ZcOxYXMgKi9cclxuICAgIG92ZXJmbG93LXk6IGF1dG87XHJcbiAgICBkaXJlY3Rpb246IHJ0bDtcclxuICB9XHJcbiAgLyogUGVyc29uYWxpemFuZG8gZWwgc2Nyb2xsYmFyICovXHJcbiAgOjotd2Via2l0LXNjcm9sbGJhciB7XHJcbiAgICB3aWR0aDogMTBweDsgLyogQW5jaG8gZGVsIHNjcm9sbGJhciAqL1xyXG4gIH1cclxuXHJcbiAgOjotd2Via2l0LXNjcm9sbGJhci10cmFjayB7XHJcbiAgICBiYWNrZ3JvdW5kOiAjZjFmMWYxOyAvKiBDb2xvciBkZWwgZm9uZG8gZGVsIHRyYWNrICovXHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4OyAvKiBCb3JkZXMgcmVkb25kZWFkb3MgKi9cclxuICB9XHJcblxyXG4gIDo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWIge1xyXG4gICAgYmFja2dyb3VuZDogdmFyKC0tYnVsbGV0LWJhY2tncm91bmQtYWN0aXZlKTsgLyogQ29sb3IgZGVsIHRodW1iICovXHJcbiAgICBib3JkZXItcmFkaXVzOiAxMHB4OyAvKiBCb3JkZXMgcmVkb25kZWFkb3MgKi9cclxuICB9XHJcblxyXG4gIDo6LXdlYmtpdC1zY3JvbGxiYXItdGh1bWI6aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZDogIzU1NTsgLyogQ29sb3IgZGVsIHRodW1iIGN1YW5kbyBzZSBwYXNhIGVsIHJhdMOzbiAqL1xyXG4gIH1cclxufVxyXG4iXX0= */";
 
 /***/ }),
 
@@ -996,7 +1002,7 @@ module.exports = "ion-card {\n  margin-top: 10px;\n  width: 90%;\n  height: 90%;
 /***/ ((module) => {
 
 "use strict";
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJoZWFkZXIuY29tcG9uZW50LnNjc3MifQ== */";
+module.exports = "@charset \"UTF-8\";\n.contact-buttons-large {\n  display: none;\n}\n.contact-button-small {\n  display: flex;\n}\n/* Mostrar los botones de contacto directamente en pantallas más grandes */\n@media (min-width: 768px) {\n  .contact-buttons-large {\n    display: flex;\n  }\n\n  .contact-button-small {\n    display: none;\n  }\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhlYWRlci5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxnQkFBZ0I7QUFBaEI7RUFDRSxhQUFBO0FBRUY7QUFDQTtFQUNFLGFBQUE7QUFFRjtBQUNBLDBFQUFBO0FBQ0E7RUFDRTtJQUNFLGFBQUE7RUFFRjs7RUFBQTtJQUNFLGFBQUE7RUFHRjtBQUNGIiwiZmlsZSI6ImhlYWRlci5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5jb250YWN0LWJ1dHRvbnMtbGFyZ2Uge1xyXG4gIGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuXHJcbi5jb250YWN0LWJ1dHRvbi1zbWFsbCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG5cclxuLyogTW9zdHJhciBsb3MgYm90b25lcyBkZSBjb250YWN0byBkaXJlY3RhbWVudGUgZW4gcGFudGFsbGFzIG3DoXMgZ3JhbmRlcyAqL1xyXG5AbWVkaWEgKG1pbi13aWR0aDogNzY4cHgpIHtcclxuICAuY29udGFjdC1idXR0b25zLWxhcmdlIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgfVxyXG4gIC5jb250YWN0LWJ1dHRvbi1zbWFsbCB7XHJcbiAgICBkaXNwbGF5OiBub25lO1xyXG4gIH1cclxufVxyXG4iXX0= */";
 
 /***/ }),
 
@@ -1062,7 +1068,7 @@ module.exports = "<ion-app>\n  <app-header [personalData]=\"personalData\"></app
 /***/ ((module) => {
 
 "use strict";
-module.exports = "<div *ngIf=\"cardData\">\n    <h1 *ngIf=\"cardData.header\">{{cardData.header}}</h1>\n    <ion-avatar>\n        <img *ngIf=\"cardData.avatarImgPath\" [src]=\"cardData.avatarImgPath\">\n    </ion-avatar>\n    <ion-card-header *ngIf=\"cardData.title || cardData.subtitle\">\n        <ion-card-subtitle *ngIf=\"cardData.subtitle\">{{cardData.subtitle}}</ion-card-subtitle>\n        <ion-card-title *ngIf=\"cardData.title\">{{cardData.title}}</ion-card-title>\n    </ion-card-header>\n    <ion-card-content *ngIf=\"cardData.content && !cardData.contentHtml\">\n        {{cardData.content}}\n    </ion-card-content>\n    <ion-card-content *ngIf=\"cardData.contentHtml\">\n        <div [outerHTML]=\"cardData.contentHtml\"></div>\n    </ion-card-content>\n    <ion-list *ngIf=\"cardData.listChips\">\n        <ion-list *ngFor=\"let item of cardData.listChips\">\n            <ion-label>{{item.name | uppercase}}</ion-label> <br>\n            <ion-chip color=\"tertiary\" *ngFor=\"let chip of item.chips\">\n                <small>\n                    <ion-label color=\"primary\">{{chip.title}}</ion-label>\n                    &nbsp;&nbsp;\n                    <ion-label color=\"secondary\">{{chip.subtitle}}</ion-label>\n                </small>\n            </ion-chip>\n        </ion-list>\n    </ion-list>\n</div>";
+module.exports = "<div *ngIf=\"cardData\">\n    <h1 *ngIf=\"cardData.header\">{{cardData.header}}</h1>\n    <ion-avatar>\n        <img *ngIf=\"cardData.avatarImgPath\" [src]=\"cardData.avatarImgPath\">\n    </ion-avatar>\n    <ion-card-header *ngIf=\"cardData.title || cardData.subtitle\">\n        <ion-card-subtitle *ngIf=\"cardData.subtitle\">{{cardData.subtitle}}</ion-card-subtitle>\n        <ion-card-title *ngIf=\"cardData.title\">{{cardData.title}}</ion-card-title>\n    </ion-card-header>\n    \n    <ion-card-content *ngIf=\"cardData.content && !cardData.contentHtml\" class=\"scrollable-content\">\n        {{cardData.content}}\n    </ion-card-content>\n    <ion-card-content *ngIf=\"cardData.contentHtml\" class=\"scrollable-content\">\n        <div [outerHTML]=\"cardData.contentHtml\"></div>\n    </ion-card-content>\n    <ion-list *ngIf=\"cardData.listChips\">\n        <ion-list *ngFor=\"let item of cardData.listChips\">\n            <ion-label>{{item.name | uppercase}}</ion-label> <br>\n            <ion-chip color=\"tertiary\" *ngFor=\"let chip of item.chips\">\n                <small>\n                    <ion-label color=\"primary\">{{chip.title}}</ion-label>\n                    &nbsp;&nbsp;\n                    <ion-label color=\"secondary\">{{chip.subtitle}}</ion-label>\n                </small>\n            </ion-chip>\n        </ion-list>\n    </ion-list>\n</div>";
 
 /***/ }),
 
@@ -1084,7 +1090,7 @@ module.exports = "<ion-footer>\n    <ion-toolbar>\n        <ion-buttons slot=\"e
 /***/ ((module) => {
 
 "use strict";
-module.exports = "<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-chip>\n      <ion-avatar>\n        <img *ngIf=\"personalData?.personalFiles?.avatarPath\" [src]=\"personalData?.personalFiles?.avatarPath\">\n        <img *ngIf=\"!personalData?.personalFiles?.avatarPath\" src=\"assets/img/avatar.svg\">\n      </ion-avatar>\n      <ion-label class=\"ion-text-capitalize\">{{personalData?.name}}</ion-label>\n    </ion-chip>\n    <ion-buttons slot=\"end\">\n      <ion-button id=\"linkedinButton\" [href]=\"'mailto:'+personalData?.email\">\n        <ion-icon name=\"mail\"></ion-icon>\n    </ion-button>      \n      <ion-button id=\"linkedinButton\" [href]=\"personalData?.socialMedia?.urlLinkedin\" target=\"_blank\">\n          <ion-icon name=\"logo-linkedin\"></ion-icon>\n      </ion-button>\n      <ion-button id=\"gitButton\" [href]=\"personalData?.socialMedia?.urlGithub\" target=\"_blank\">\n          <ion-icon name=\"logo-github\"></ion-icon>\n      </ion-button>\n  </ion-buttons>\n  </ion-toolbar>\n</ion-header>";
+module.exports = "<ion-header [translucent]=\"true\">\n  <ion-toolbar>\n    <ion-chip>\n      <ion-avatar>\n        <img *ngIf=\"personalData?.personalFiles?.avatarPath\" [src]=\"personalData?.personalFiles?.avatarPath\">\n        <img *ngIf=\"!personalData?.personalFiles?.avatarPath\" src=\"assets/img/avatar.svg\">\n      </ion-avatar>\n      <ion-label class=\"ion-text-capitalize\">{{ personalData?.name }}</ion-label>\n    </ion-chip>\n\n    <!-- Botón de menú desplegable para pantallas pequeñas -->\n    <ion-buttons slot=\"end\" class=\"contact-button-small\">\n      <ion-button (click)=\"openContactMenu($event)\">\n        <ion-icon name=\"person-circle-outline\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n\n    <!-- Botones de contacto que solo se muestran en pantallas grandes -->\n    <ion-buttons slot=\"end\" class=\"contact-buttons-large\">\n      <ion-button id=\"mailButton\" [href]=\"'mailto:' + personalData?.email\">\n        <ion-icon name=\"mail\"></ion-icon>\n      </ion-button>\n      <ion-button id=\"linkedinButton\" [href]=\"personalData?.socialMedia?.urlLinkedin\" target=\"_blank\">\n        <ion-icon name=\"logo-linkedin\"></ion-icon>\n      </ion-button>\n      <ion-button id=\"gitButton\" [href]=\"personalData?.socialMedia?.urlGithub\" target=\"_blank\">\n        <ion-icon name=\"logo-github\"></ion-icon>\n      </ion-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Popover para menú de contacto en pantallas pequeñas -->\n<ion-popover #contactMenu>\n  <ng-template>\n    <ion-list>\n      <ion-item button [href]=\"'mailto:' + personalData?.email\">\n        <ion-icon slot=\"start\" name=\"mail\"></ion-icon>\n        <ion-label>Email</ion-label>\n      </ion-item>\n      <ion-item button [href]=\"personalData?.socialMedia?.urlLinkedin\" target=\"_blank\">\n        <ion-icon slot=\"start\" name=\"logo-linkedin\"></ion-icon>\n        <ion-label>LinkedIn</ion-label>\n      </ion-item>\n      <ion-item button [href]=\"personalData?.socialMedia?.urlGithub\" target=\"_blank\">\n        <ion-icon slot=\"start\" name=\"logo-github\"></ion-icon>\n        <ion-label>GitHub</ion-label>\n      </ion-item>\n    </ion-list>\n  </ng-template>\n</ion-popover>";
 
 /***/ }),
 
@@ -1117,7 +1123,7 @@ module.exports = "<app-slide-cards [title]=\"'Presentation'\" *ngIf=\"listCards\
 /***/ ((module) => {
 
 "use strict";
-module.exports = "<h1 class=\"h1\">{{title}}</h1>\n<swiper\n  class=\"mySwiper swiper-h\"\n  [spaceBetween]=\"50\"\n  [pagination]=\"pagination\"\n  [navigation]=\"true\"\n> \n  <ng-template swiperSlide ngIf=\"listCards\">\n    <swiper\n      [direction]=\"'vertical'\"\n      [spaceBetween]=\"50\"\n      [pagination]=\"{\n        clickable: true\n      }\"\n    >\n      <ng-template swiperSlide *ngFor=\"let card of listCards; let index=index\">        \n        <app-card [cardData]=\"card\" class=\"card-full\"></app-card>\n      </ng-template>      \n    </swiper>\n  </ng-template>\n\n</swiper>\n";
+module.exports = "<h1 class=\"h1\">{{title}}</h1>\n<swiper\n  class=\"mySwiper swiper-h\"\n  [spaceBetween]=\"50\"\n  [pagination]=\"pagination\"\n  [navigation]=\"true\"\n> \n  <ng-template swiperSlide ngIf=\"listCards\">\n    <swiper\n      [direction]=\"'vertical'\"\n      [spaceBetween]=\"50\"\n      [pagination]=\"{\n        clickable: true\n      }\"\n      [mousewheel]=\"mousewheel\"\n    >\n      <ng-template swiperSlide *ngFor=\"let card of listCards; let index=index\">        \n        <app-card [cardData]=\"card\" class=\"card-full\"></app-card>\n      </ng-template>      \n    </swiper>\n  </ng-template>\n\n</swiper>\n";
 
 /***/ }),
 

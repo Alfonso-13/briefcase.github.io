@@ -6,17 +6,17 @@
       {
         "name": "Basics",
         "experience": [
-          { "title": "HTML", "time": "7 YEARS"},
-          { "title": "CSS", "time": "1 YEAR"},
-          { "title": "JAVASCRIPT", "time": "7 YEARS"}
+          { "title": "HTML", "time": "9 YEARS"},
+          { "title": "JAVASCRIPT", "time": "9 YEARS"},
+          { "title": "CSS", "time": "9 YEARS"}
         ]
       },
       {
         "name": "Frameworks",
         "experience": [
-          { "title": "C#", "time": "7 YEARS"},
-          { "title": "VB .NET", "time": "7 YEARS"},
-          { "title": "ANGULAR", "time": "2 YEARS"},
+          { "title": "C#", "time": "9 YEARS"},
+          { "title": "VB .NET", "time": "9 YEARS"},
+          { "title": "ANGULAR", "time": "4 YEARS"},
           { "title": "REACT JS", "time": "6 MONTHS"},
           { "title": "ANGULAR JS", "time": "6 MONTHS"},
           { "title": "PHASER", "time": "6 MONTHS"}
@@ -25,8 +25,8 @@
       {
         "name": "Styles",
         "experience": [
-          { "title": "BOOSTRAP", "time": "2 YEARS"},
-          { "title": "MATERIAL UI", "time": "1 YEAR"}
+          { "title": "BOOSTRAP", "time": "4 YEARS"},
+          { "title": "MATERIAL UI", "time": "4 YEARS"}
         ]
       }
     ]
@@ -38,9 +38,9 @@
       {
         "name": "Technology",
         "experience": [
-          { "title": "ASP .NET", "time": "7 YEARS"},
-          { "title": ".NET CORE", "time": "2 YEARS"},
-          { "title": "NODE", "time": "2 YEARS"},
+          { "title": "ASP .NET", "time": "9 YEARS"},
+          { "title": ".NET CORE", "time": "3 YEARS"},
+          { "title": "NODE", "time": "4 YEARS"},
           { "title": "JAVA (SPRING)", "time": "2 YEARS"},
           { "title": "PHP", "time": "6 MONTHS"}
         ]
@@ -54,7 +54,7 @@
       {
         "name": "RDBMS",
         "experience": [
-          { "title": "MSSQL", "time": "7 YEARS"},
+          { "title": "MSSQL", "time": "9 YEARS"},
           { "title": "MySQL", "time": "1 YEAR"},
           { "title": "ORACLE", "time": "1 YEAR"},
           { "title": "INFORMIX", "time": "6 MONTHS"}
@@ -63,6 +63,7 @@
       {
         "name": "NoSQL",
         "experience": [
+          { "title": "COSMOS DB", "time": "6 MONTHS"},
           { "title": "MONGO DB", "time": "6 MONTHS"},
           { "title": "FIREBASE DB", "time": "6 MONTHS"}
         ]
@@ -76,16 +77,25 @@
       {
         "name": "Infrastructure",
         "experience": [
-          { "title": "AZURE", "time": "2 YEARS"},
+          { "title": "AZURE", "time": "3 YEARS"},
           { "title": "FIREBASE", "time": "1 YEAR"},
           { "title": "HEROKU", "time": "1 YEAR"},
-          { "title": "MICROSOFT TFS", "time": "1 YEAR"}
+          { "title": "MICROSOFT TFS", "time": "1 YEAR"},
+          { "title": "GITHUB", "time": "1 YEAR"}
         ]
       },
       {
         "name": "AUTOMATION",
         "experience": [
+          { "title": "AZURE DEVOPS", "time": "2 YEARS"},
           { "title": "JENKINS", "time": "1 YEAR"}
+        ]
+      },
+      {
+        "name": "CODE QUALITY",
+        "experience": [
+          { "title": "SONARQUBE", "time": "3 YEARS"},
+          { "title": "ESLint", "time": "3 YEARS"}
         ]
       },
       {
@@ -125,11 +135,11 @@
     "knowledge": [
       {
         "experience": [
-          { "title": "WATERFALL", "time": "7 YEARS"},
+          { "title": "WATERFALL", "time": "9 YEARS"},
+          { "title": "AGILE (SCRUM)", "time": "3 YEARS"},
+          { "title": "KANBAN (CARDS)", "time": "3 YEARS"},
           { "title": "CMMI DEV", "time": "2 YEARS"},
-          { "title": "AGILE (SCRUM)", "time": "1 YEAR"},
-          { "title": "SPIRAL", "time": "1 YEAR"},
-          { "title": "KANBAN", "time": "1 YEAR"}
+          { "title": "SPIRAL", "time": "1 YEAR"}
         ]
       }
     ]

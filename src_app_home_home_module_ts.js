@@ -132,12 +132,14 @@ let HomePage = class HomePage {
                         icon = '<ion-icon name="list-outline"></ion-icon>';
                         break;
                 }
-                return '' +
-                    '<span class="' + className + '" style="width: auto !important;">' +
+                return ('' +
+                    '<span class="' +
+                    className +
+                    '" style="width: auto !important;">' +
                     icon +
                     '&nbsp' +
                     title +
-                    '</span>';
+                    '</span>');
             },
         };
     }
