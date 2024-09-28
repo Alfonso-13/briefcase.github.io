@@ -9,24 +9,19 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./presentation.component.scss'],
 })
 export class PresentationComponent implements OnInit {
-
   listCards: CardData[];
   presentationData: PresentationData[];
 
-  constructor(
-    private dataService: DataService
-  ) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.dataService.getPresentationData().subscribe(
-      response => {
-        this.presentationData = response;
-        this.listCards = [];
-        this.presentationData.forEach(presentationData => {          
-          this.listCards.push(this.presentationDataToCard(presentationData));
-        });
-      }
-    );
+    this.dataService.getPresentationData().subscribe((response) => {
+      this.presentationData = response;
+      this.listCards = [];
+      this.presentationData.forEach((presentationData) => {
+        this.listCards.push(this.presentationDataToCard(presentationData));
+      });
+    });
   }
 
   presentationDataToCard(presentationData: any): CardData {
@@ -35,7 +30,7 @@ export class PresentationComponent implements OnInit {
       header: presentationData.header,
       title: presentationData.title,
       subtitle: presentationData.subtitle,
-      content: presentationData.content
-    }
+      content: presentationData.content,
+    };
   }
 }

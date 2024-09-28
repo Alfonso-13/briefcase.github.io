@@ -1,21 +1,48 @@
 ion-card {
-    margin-top: 10px;
-    width: 90%;
-    height: 90%;  
-    padding-bottom: 0px !important;  
+  margin-top: 10px;
+  width: 90%;
+  height: 90%;
+  padding-bottom: 0px !important;
 }
 
-ion-avatar  {     
-    width:100% !important;  
-    height : 100% !important;  
-    max-width: 150px !important;  //any size
-    max-height: 150px !important; //any size 
-    }
+ion-avatar {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 150px !important; //any size
+  max-height: 150px !important; //any size
+}
 
 .card-content-md {
-    padding-bottom: 1px;
+  padding-bottom: 1px;
 }
 
 .card-md {
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .scrollable-content {
+    max-height: 200px; /* Ajusta la altura para móviles */
+    padding: 8px; /* Menor padding en pantallas pequeñas */
     overflow-y: auto;
+    direction: rtl;
+  }
+  /* Personalizando el scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color del fondo del track */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--bullet-background-active); /* Color del thumb */
+    border-radius: 10px; /* Bordes redondeados */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del thumb cuando se pasa el ratón */
+  }
 }

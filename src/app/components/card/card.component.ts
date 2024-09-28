@@ -7,11 +7,9 @@ import { CardData } from 'src/app/interface/card-data';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-
   @Input() cardData: CardData;
-  
-  constructor() { }
+
+  constructor() {}
 
   ngOnInit() {}
-
 }

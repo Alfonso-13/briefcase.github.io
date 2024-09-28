@@ -1,0 +1,17 @@
+.contact-buttons-large {
+  display: none;
+}
+
+.contact-button-small {
+  display: flex;
+}
+
+/* Mostrar los botones de contacto directamente en pantallas más grandes */
+@media (min-width: 768px) {
+  .contact-buttons-large {
+    display: flex;
+  }
+  .contact-button-small {
+    display: none;
+  }
+}

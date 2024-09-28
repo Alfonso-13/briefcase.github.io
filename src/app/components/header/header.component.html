@@ -5,18 +5,47 @@
         <img *ngIf="personalData?.personalFiles?.avatarPath" [src]="personalData?.personalFiles?.avatarPath">
         <img *ngIf="!personalData?.personalFiles?.avatarPath" src="assets/img/avatar.svg">
       </ion-avatar>
-      <ion-label class="ion-text-capitalize">{{personalData?.name}}</ion-label>
+      <ion-label class="ion-text-capitalize">{{ personalData?.name }}</ion-label>
     </ion-chip>
-    <ion-buttons slot="end">
-      <ion-button id="linkedinButton" [href]="'mailto:'+personalData?.email">
+
+    <!-- Botón de menú desplegable para pantallas pequeñas -->
+    <ion-buttons slot="end" class="contact-button-small">
+      <ion-button (click)="openContactMenu($event)">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Botones de contacto que solo se muestran en pantallas grandes -->
+    <ion-buttons slot="end" class="contact-buttons-large">
+      <ion-button id="mailButton" [href]="'mailto:' + personalData?.email">
         <ion-icon name="mail"></ion-icon>
-    </ion-button>      
+      </ion-button>
       <ion-button id="linkedinButton" [href]="personalData?.socialMedia?.urlLinkedin" target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon>
+        <ion-icon name="logo-linkedin"></ion-icon>
       </ion-button>
       <ion-button id="gitButton" [href]="personalData?.socialMedia?.urlGithub" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
+        <ion-icon name="logo-github"></ion-icon>
       </ion-button>
-  </ion-buttons>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<!-- Popover para menú de contacto en pantallas pequeñas -->
+<ion-popover #contactMenu>
+  <ng-template>
+    <ion-list>
+      <ion-item button [href]="'mailto:' + personalData?.email">
+        <ion-icon slot="start" name="mail"></ion-icon>
+        <ion-label>Email</ion-label>
+      </ion-item>
+      <ion-item button [href]="personalData?.socialMedia?.urlLinkedin" target="_blank">
+        <ion-icon slot="start" name="logo-linkedin"></ion-icon>
+        <ion-label>LinkedIn</ion-label>
+      </ion-item>
+      <ion-item button [href]="personalData?.socialMedia?.urlGithub" target="_blank">
+        <ion-icon slot="start" name="logo-github"></ion-icon>
+        <ion-label>GitHub</ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-template>
+</ion-popover>

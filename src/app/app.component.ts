@@ -10,23 +10,17 @@ import { PersonalData } from './interface/personal-data';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  
   personalData: PersonalData;
-  
-  constructor(
-    private platform: Platform,    
-    private dataService: DataService
-  ) {
+
+  constructor(private platform: Platform, private dataService: DataService) {
     this.initializeApp();
   }
 
   async initializeApp() {
-    this.platform.ready().then( async () => {
-       this.dataService.getPersonalData().subscribe(
-         response => {          
-          this.personalData = response;
-         }
-       );
+    this.platform.ready().then(async () => {
+      this.dataService.getPersonalData().subscribe((response) => {
+        this.personalData = response;
+      });
     });
   }
 }

@@ -12,6 +12,7 @@
       [pagination]="{
         clickable: true
       }"
+      [mousewheel]="mousewheel"
     >
       <ng-template swiperSlide *ngFor="let card of listCards; let index=index">        
         <app-card [cardData]="card" class="card-full"></app-card>

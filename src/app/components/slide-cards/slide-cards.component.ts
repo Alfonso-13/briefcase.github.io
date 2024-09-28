@@ -2,10 +2,10 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { CardData } from 'src/app/interface/card-data';
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination } from "swiper";
+import SwiperCore, { Pagination, Mousewheel } from "swiper";
 
 // install Swiper modules
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination, Mousewheel]);
 
 @Component({
   selector: 'app-slide-cards',
@@ -31,4 +31,8 @@ export class SlideCardsComponent implements OnInit {
       return '<span class="' + className + '"></span>"';
     },
   };  
+
+  mousewheel = {
+    forceToAxis: true,
+  };
 }

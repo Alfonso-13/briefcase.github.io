@@ -7,10 +7,11 @@
         <ion-card-subtitle *ngIf="cardData.subtitle">{{cardData.subtitle}}</ion-card-subtitle>
         <ion-card-title *ngIf="cardData.title">{{cardData.title}}</ion-card-title>
     </ion-card-header>
-    <ion-card-content *ngIf="cardData.content && !cardData.contentHtml">
+    
+    <ion-card-content *ngIf="cardData.content && !cardData.contentHtml" class="scrollable-content">
         {{cardData.content}}
     </ion-card-content>
-    <ion-card-content *ngIf="cardData.contentHtml">
+    <ion-card-content *ngIf="cardData.contentHtml" class="scrollable-content">
         <div [outerHTML]="cardData.contentHtml"></div>
     </ion-card-content>
     <ion-list *ngIf="cardData.listChips">
