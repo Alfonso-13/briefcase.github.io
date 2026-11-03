@@ -96,7 +96,7 @@ npm run verify
 npm run deploy:pages
 ```
 
-`deploy:pages` crea el build antes de invocar `angular-cli-ghpages`; por ello no debe usarse para una validación local ordinaria.
+`deploy:pages` crea el build y publica el contenido navegable de `www/browser/` antes de invocar `angular-cli-ghpages`; por ello no debe usarse para una validación local ordinaria.
 
 ## Alcance
 

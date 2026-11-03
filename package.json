@@ -20,7 +20,7 @@
     "build": "ng build --configuration=production --base-href=/briefcase.github.io/",
     "prebuild:debug": "npm run prepare:config",
     "build:debug": "ng build --configuration=development --base-href=/briefcase.github.io/ --source-map",
-    "deploy:pages": "npm run build && angular-cli-ghpages --dir=www --branch=gh-pages",
+    "deploy:pages": "npm run build && angular-cli-ghpages --dir=www/browser --branch=gh-pages",
     "pretest": "npm run prepare:config",
     "test": "vitest run",
     "lint": "ng lint",

@@ -209,7 +209,7 @@ Las posiciones expresan jerarquía, no geografía. Los dominios se distribuyen e
 .\scripts\use-node.ps1 build
 ```
 
-El resultado queda en `www/`. El repositorio usa este contrato de ramas:
+Angular 22 genera el sitio navegable en `www/browser/`; `www/` es sólo el contenedor del builder. El repositorio usa este contrato de ramas:
 
 | Rama | Responsabilidad |
 | --- | --- |
@@ -222,7 +222,7 @@ El resultado queda en `www/`. El repositorio usa este contrato de ramas:
 npm run deploy:pages
 ```
 
-El script ejecuta primero el build y después invoca `angular-cli-ghpages --dir=www --branch=gh-pages`. La publicación crea un commit generado y modifica la rama remota de hosting; debe ejecutarse sólo con autorización explícita. Un build local no demuestra que GitHub Pages haya sido actualizado.
+El script ejecuta primero el build y después invoca `angular-cli-ghpages --dir=www/browser --branch=gh-pages`. La publicación crea un commit generado y modifica la rama remota de hosting; debe ejecutarse sólo con autorización explícita. Un build local no demuestra que GitHub Pages haya sido actualizado.
 
 ## Validación
 
