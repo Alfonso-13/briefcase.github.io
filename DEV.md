@@ -222,7 +222,7 @@ Angular 22 genera el sitio navegable en `www/browser/`; `www/` es sólo el conte
 npm run deploy:pages
 ```
 
-El script ejecuta primero el build y después invoca `angular-cli-ghpages --dir=www/browser --branch=gh-pages`. La publicación crea un commit generado y modifica la rama remota de hosting; debe ejecutarse sólo con autorización explícita. Un build local no demuestra que GitHub Pages haya sido actualizado.
+El script ejecuta primero el build y después copia `www/browser/` a un worktree temporal basado en `origin/gh-pages`. La publicación crea un commit generado y modifica la rama remota de hosting; debe ejecutarse sólo con autorización explícita. Un build local no demuestra que GitHub Pages haya sido actualizado.
 
 ## Validación
 
