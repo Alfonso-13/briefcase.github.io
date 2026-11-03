@@ -1,0 +1,22 @@
+{
+  "name": "Neri Alfonso Menchaca Castillo",
+  "title": "Senior Full Stack .NET · Angular · Azure",
+  "titleEs": "Desarrollador Senior Full Stack .NET · Angular · Azure",
+  "email": "neri_menchaca@live.com",
+  "personalFiles":{
+    "avatarPath": "assets/img/alfonso-13-brand.png"
+  },  
+  "socialMedia": {    
+    "urlGithub": "https://github.com/Alfonso-13",
+    "urlLinkedin": "https://www.linkedin.com/in/neri-menchaca-castillo/",
+    "urlLinkedinCertifications": "https://www.linkedin.com/in/neri-menchaca-castillo/details/certifications/",
+    "urlHackerRank": "https://www.hackerrank.com/profile/neri_menchaca",
+    "urlUdemy": "https://www.udemy.com/user/neri-menchaca/",
+    "urlCodewars": "https://www.codewars.com/users/Alfonso-13",
+    "urlSkillsoft": "https://skillsoft.digitalbadges.skillsoft.com/profile/nerialfonsomenchaca207429/wallet"
+  },
+  "footer": {
+    "label": "Developed by Alfonso-13",
+    "url": "https://github.com/Alfonso-13"
+  }
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "header": "Portfolio Author",
+    "avatarImgPath": "assets/img/avatar.svg",
+    "title": "Full Stack Developer",
+    "subtitle": "Software · Systems · Delivery",
+    "content": "Replace this example with a concise, evidence-based professional summary.",
+    "headerEs": "Autor del portafolio",
+    "titleEs": "Desarrollador Full Stack",
+    "subtitleEs": "Software · Sistemas · Entrega",
+    "contentEs": "Reemplaza este ejemplo con un resumen profesional breve y basado en evidencia."
+  }
+]

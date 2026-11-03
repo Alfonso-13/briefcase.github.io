@@ -1,0 +1,13 @@
+[
+  {
+    "header": "Computer Science",
+    "avatarImgPath": "assets/img/avatar.svg",
+    "title": "Degree or certification",
+    "subtitle": "Institution · Year",
+    "content": "Replace this example with public education or certification details.",
+    "headerEs": "Ciencias computacionales",
+    "titleEs": "Título o certificación",
+    "subtitleEs": "Institución · Año",
+    "contentEs": "Reemplaza este ejemplo con formación o certificaciones públicas."
+  }
+]

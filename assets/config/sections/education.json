@@ -1,0 +1,68 @@
+[
+  {
+    "name": "Computer Systems Engineer",
+    "title": "Degree",
+    "subtitle": "Facultad de Sistemas | UAdeC - 2008 - 2014 Saltillo, Coahuila.",
+    "description": "<p><b>Computer Systems Engineering degree</b> completed at the Faculty of Systems Engineering, UAdeC, from 2008 to 2014.</p><p>This academic foundation supports a career focused on enterprise software, system integration, architecture, testing and continuous improvement.</p><br><p><b>Languages</b></p><ul><li>English upper-intermediate (B2)</li><li>Spanish native</li></ul>",
+    "image": "assets/img/sistemasUadeC.webp",
+    "nameEs": "Ingeniero en Sistemas Computacionales",
+    "titleEs": "Titulado",
+    "subtitleEs": "Facultad de Sistemas | UAdeC - 2008 - 2014 Saltillo, Coahuila.",
+    "descriptionEs": "<p><b>Título de Ingeniería en Sistemas Computacionales</b> cursado en la Facultad de Sistemas de la UAdeC entre 2008 y 2014.</p><p>Esta formación respalda una trayectoria enfocada en software empresarial, integración de sistemas, arquitectura, pruebas y mejora continua.</p><br><p><b>Idiomas</b></p><ul><li>Inglés intermedio alto (B2)</li><li>Español nativo</li></ul>"
+  },
+  {
+    "name": "Udemy",
+    "title": "Courses",
+    "subtitle": "@neri_menchaca",
+    "description": "<p>Continuing education that complements my professional work in web and cross-platform development.</p><ul><li>Ionic 6+</li><li>Angular 12 and ASP.NET Core 5</li><li>React JS</li></ul><br><a href=\"https://www.udemy.com/user/neri-menchaca/\" target=\"_blank\" rel=\"noopener noreferrer\">Open public Udemy profile</a>",
+    "image": "assets/img/udemy.jpg",
+    "nameEs": "Udemy",
+    "titleEs": "Cursos",
+    "subtitleEs": "@neri_menchaca",
+    "descriptionEs": "<p>Formación continua que complementa mi trabajo profesional en desarrollo web y multiplataforma.</p><ul><li>Ionic 6+</li><li>Angular 12 y ASP.NET Core 5</li><li>React JS</li></ul><br><a href=\"https://www.udemy.com/user/neri-menchaca/\" target=\"_blank\" rel=\"noopener noreferrer\">Abrir perfil público de Udemy</a>"
+  },
+  {
+    "name": "Hackerrank",
+    "title": "Certificates",
+    "subtitle": "@neri_menchaca",
+    "description": "<p>Public technical-assessment profile focused here on SQL knowledge used throughout my work with enterprise and financial data.</p><ul><li>SQL (Basic)</li><li>SQL (Intermediate)</li></ul><br><a href=\"https://www.hackerrank.com/profile/neri_menchaca\" target=\"_blank\" rel=\"noopener noreferrer\">Open public HackerRank profile</a>",
+    "image": "assets/img/HackerRank.png",
+    "nameEs": "Hackerrank",
+    "titleEs": "Certificados",
+    "subtitleEs": "@neri_menchaca",
+    "descriptionEs": "<p>Perfil público de evaluación técnica, enfocado aquí en conocimientos de SQL utilizados durante mi experiencia con datos empresariales y financieros.</p><ul><li>SQL (Básico)</li><li>SQL (Intermedio)</li></ul><br><a href=\"https://www.hackerrank.com/profile/neri_menchaca\" target=\"_blank\" rel=\"noopener noreferrer\">Abrir perfil público de HackerRank</a>"
+  },
+  {
+    "name": "LinkedIn Certifications",
+    "title": "Credentials",
+    "subtitle": "Public certification record",
+    "description": "<p>Public index of courses, certifications and professional credentials associated with my LinkedIn profile. The portfolio links to the source so each credential can be reviewed directly.</p><br><a href=\"https://www.linkedin.com/in/neri-menchaca-castillo/details/certifications/\" target=\"_blank\" rel=\"noopener noreferrer\">Open LinkedIn certifications</a>",
+    "image": "assets/img/linkedin-certifications.svg",
+    "nameEs": "Certificaciones de LinkedIn",
+    "titleEs": "Credenciales",
+    "subtitleEs": "Registro público de certificaciones",
+    "descriptionEs": "<p>Índice público de cursos, certificaciones y credenciales profesionales asociadas con mi perfil de LinkedIn. El portafolio enlaza la fuente para que cada credencial pueda revisarse directamente.</p><br><a href=\"https://www.linkedin.com/in/neri-menchaca-castillo/details/certifications/\" target=\"_blank\" rel=\"noopener noreferrer\">Abrir certificaciones en LinkedIn</a>"
+  },
+  {
+    "name": "Skillsoft Digital Badges",
+    "title": "Badges",
+    "subtitle": "@nerialfonsomenchaca207429",
+    "description": "<p>Public Skillsoft wallet used to present digital learning badges with their original verification source. Individual badge details remain in Skillsoft rather than being duplicated in the portfolio.</p><br><a href=\"https://skillsoft.digitalbadges.skillsoft.com/profile/nerialfonsomenchaca207429/wallet\" target=\"_blank\" rel=\"noopener noreferrer\">Open Skillsoft badge wallet</a>",
+    "image": "assets/img/skillsoft.svg",
+    "nameEs": "Insignias digitales Skillsoft",
+    "titleEs": "Insignias",
+    "subtitleEs": "@nerialfonsomenchaca207429",
+    "descriptionEs": "<p>Cartera pública de Skillsoft utilizada para presentar insignias digitales de aprendizaje con su fuente original de verificación. El detalle de cada insignia permanece en Skillsoft en lugar de duplicarse en el portafolio.</p><br><a href=\"https://skillsoft.digitalbadges.skillsoft.com/profile/nerialfonsomenchaca207429/wallet\" target=\"_blank\" rel=\"noopener noreferrer\">Abrir cartera de insignias Skillsoft</a>"
+  },
+  {
+    "name": "Codewars",
+    "title": "Coding practice",
+    "subtitle": "@Alfonso-13",
+    "description": "<p>Public profile for coding kata and continuous problem-solving practice, aligned with the analytical and puzzle-solving approach described in my professional profile.</p><br><a href=\"https://www.codewars.com/users/Alfonso-13\" target=\"_blank\" rel=\"noopener noreferrer\">Open Codewars profile</a>",
+    "image": "assets/img/codewars.svg",
+    "nameEs": "Codewars",
+    "titleEs": "Práctica de programación",
+    "subtitleEs": "@Alfonso-13",
+    "descriptionEs": "<p>Perfil público de katas de programación y práctica continua de resolución de problemas, alineado con el enfoque analítico descrito en mi perfil profesional.</p><br><a href=\"https://www.codewars.com/users/Alfonso-13\" target=\"_blank\" rel=\"noopener noreferrer\">Abrir perfil de Codewars</a>"
+  }
+]

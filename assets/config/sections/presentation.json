@@ -1,0 +1,13 @@
+[
+  {
+  "header": "Neri Alfonso Menchaca Castillo",
+  "avatarImgPath": "assets/img/alfonso-13-brand.png",
+  "subtitle": "Senior Full Stack .NET Developer",
+  "title": "Angular · Azure · 12+ years of experience",
+  "content": "Senior Full Stack .NET developer with 12+ years designing, architecting and delivering enterprise applications across financial, tax, insurance, coordination and aviation domains. I take solutions from concept to production with .NET, Angular, SQL Server, REST APIs and Azure, collaborating with cross-functional teams in Agile environments. My experience includes system integration, performance optimization, software modernization, team coordination and direct work with business stakeholders. Since 2024 I have used Generative AI and agentic coding tools such as GitHub Copilot, ChatGPT, OpenAI Codex and Claude Code for code generation, unit testing, documentation and repetitive tasks; every AI-assisted result is manually reviewed, tested and validated before a pull request.",
+  "headerEs": "Neri Alfonso Menchaca Castillo",
+  "subtitleEs": "Desarrollador Senior Full Stack .NET",
+  "titleEs": "Angular · Azure · más de 12 años de experiencia",
+  "contentEs": "Desarrollador Senior Full Stack .NET con más de 12 años diseñando, arquitectando y entregando aplicaciones empresariales para los sectores financiero, fiscal, asegurador, de coordinación y aviación. Llevo soluciones desde el concepto hasta producción con .NET, Angular, SQL Server, API REST y Azure, colaborando con equipos multidisciplinarios bajo prácticas ágiles. Mi experiencia incluye integración de sistemas, optimización de rendimiento, modernización de software, coordinación de equipos y trabajo directo con responsables de negocio. Desde 2024 utilizo IA generativa y herramientas de desarrollo agéntico como GitHub Copilot, ChatGPT, OpenAI Codex y Claude Code para generar código, pruebas unitarias, documentación y tareas repetitivas; cada resultado se revisa, prueba y valida manualmente antes de un pull request."
+  }
+]

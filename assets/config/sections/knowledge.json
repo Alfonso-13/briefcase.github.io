@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Front-End",
+    "image": "assets/img/Skills/FrontEnd.png",
+    "description": "Angular is the primary front-end stack across my enterprise work at NTT DATA, Cognizant, TCS and Dextra. I have built operational interfaces, tax and financial workflows, Sitecore components and API-driven experiences; I also participated in an ERP modernization with React.",
+    "descriptionEs": "Angular es el stack principal de front-end en mi experiencia empresarial en NTT DATA, Cognizant, TCS y Dextra. He construido interfaces operativas, flujos fiscales y financieros, componentes para Sitecore y experiencias integradas mediante API; también participé en la modernización de un ERP con React.",
+    "knowledge": [
+      {
+        "name": "Basics",
+        "experience": [
+          { "title": "HTML", "time": "10+ YEARS"},
+          { "title": "JAVASCRIPT", "time": "10+ YEARS"},
+          { "title": "CSS", "time": "10+ YEARS"}
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "experience": [
+          { "title": "TYPESCRIPT", "time": "7+ YEARS"},
+          {
+            "title": "ANGULAR",
+            "time": "7+ YEARS",
+            "description": "Applications, operational panels and configurable public experiences.",
+            "descriptionEs": "Aplicaciones, paneles operativos y experiencias públicas configurables.",
+            "projects": [
+              {
+                "name": "Briefcase Knowledge World",
+                "summary": "Interactive portfolio built with Angular, Ionic and Three.js.",
+                "summaryEs": "Portafolio interactivo construido con Angular, Ionic y Three.js.",
+                "url": "https://alfonso-13.github.io/briefcase.github.io/"
+              }
+            ],
+            "repositories": [
+              {
+                "name": "briefcase.github.io",
+                "url": "https://github.com/Alfonso-13/briefcase.github.io"
+              }
+            ]
+          },
+          { "title": "REACT JS", "time": "6 MONTHS"},
+          { "title": "ANGULAR JS", "time": "6 MONTHS"},
+          { "title": "PHASER", "time": "6 MONTHS"}
+        ]
+      },
+      {
+        "name": "Styles",
+        "experience": [
+          { "title": "BOOTSTRAP", "time": "7+ YEARS"},
+          { "title": "ANGULAR MATERIAL", "time": "7+ YEARS"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Back-End",
+    "image": "assets/img/Skills/BackEnd.png",
+    "description": "My back-end experience is centered on C#, ASP.NET and modern .NET. I design and maintain REST APIs for aviation planning, aircraft operations, fuel and financial workflows, as well as tax compliance, reconciliation, insurance and enterprise integrations.",
+    "descriptionEs": "Mi experiencia de back-end se centra en C#, ASP.NET y .NET moderno. Diseño y mantengo API REST para planeación aeronáutica, operaciones de aeronaves, combustible y flujos financieros, además de cumplimiento fiscal, conciliación, seguros e integraciones empresariales.",
+    "knowledge": [
+      {
+        "name": "Technology",
+        "experience": [
+          { "title": "C# / ASP.NET", "time": "12+ YEARS"},
+          { "title": ".NET CORE / .NET 6-8", "time": "7+ YEARS"},
+          { "title": "REST API", "time": "10+ YEARS"},
+          { "title": "AZURE FUNCTIONS", "time": "3+ YEARS"},
+          { "title": "NODE", "time": "4 YEARS"},
+          { "title": "JAVA (SPRING)", "time": "2 YEARS"},
+          { "title": "PHP", "time": "6 MONTHS"}
+        ]
+      }      
+    ]
+  },
+  {
+    "name": "Database",
+    "image": "assets/img/Skills/Database.png",
+    "description": "SQL Server has supported my work throughout financial, ERP, insurance and operational systems. At Cognizant I worked with Cosmos DB and Elasticsearch to improve financial-data query performance and reduce production issues.",
+    "descriptionEs": "SQL Server ha respaldado mi trabajo en sistemas financieros, ERP, seguros y operación. En Cognizant trabajé con Cosmos DB y Elasticsearch para mejorar el rendimiento de consultas de datos financieros y reducir incidencias en producción.",
+    "knowledge": [
+      {
+        "name": "RDBMS",
+        "experience": [
+          { "title": "MSSQL", "time": "12+ YEARS"},
+          { "title": "MySQL", "time": "1 YEAR"},
+          { "title": "ORACLE", "time": "1 YEAR"},
+          { "title": "INFORMIX", "time": "6 MONTHS"}
+        ]
+      },
+      {
+        "name": "NoSQL",
+        "experience": [
+          { "title": "COSMOS DB", "time": "3+ YEARS"},
+          { "title": "ELASTICSEARCH", "time": "3+ YEARS"},
+          { "title": "MONGO DB", "time": "6 MONTHS"},
+          { "title": "FIREBASE DB", "time": "6 MONTHS"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Dev Ops",
+    "image": "assets/img/Skills/DevOps.png",
+    "description": "I deliver cloud applications with Azure App Services, Azure Functions, Azure DevOps and Application Insights. Since 2024 I also use GitHub Copilot, ChatGPT, OpenAI Codex and Claude Code as reviewed and tested development assistants.",
+    "descriptionEs": "Entrego aplicaciones en la nube con Azure App Services, Azure Functions, Azure DevOps y Application Insights. Desde 2024 también utilizo GitHub Copilot, ChatGPT, OpenAI Codex y Claude Code como asistentes de desarrollo cuyos resultados siempre reviso y pruebo.",
+    "knowledge": [
+      {
+        "name": "Infrastructure",
+        "experience": [
+          { "title": "AZURE", "time": "4+ YEARS"},
+          { "title": "AZURE APP SERVICES", "time": "4+ YEARS"},
+          { "title": "APPLICATION INSIGHTS", "time": "3+ YEARS"},
+          { "title": "FIREBASE", "time": "1 YEAR"},
+          { "title": "HEROKU", "time": "1 YEAR"},
+          { "title": "MICROSOFT TFS", "time": "1 YEAR"},
+          { "title": "GITHUB", "time": "4+ YEARS"}
+        ]
+      },
+      {
+        "name": "AUTOMATION",
+        "experience": [
+          { "title": "AZURE DEVOPS", "time": "2 YEARS"},
+          { "title": "JENKINS", "time": "1 YEAR"}
+        ]
+      },
+      {
+        "name": "CODE QUALITY",
+        "experience": [
+          { "title": "SONARQUBE", "time": "3 YEARS"},
+          { "title": "ESLint", "time": "3 YEARS"}
+        ]
+      },
+      {
+        "name": "AI-ASSISTED DEVELOPMENT",
+        "experience": [
+          { "title": "GITHUB COPILOT", "time": "SINCE 2024"},
+          { "title": "CHATGPT", "time": "SINCE 2024"},
+          { "title": "OPENAI CODEX", "time": "SINCE 2024"},
+          { "title": "CLAUDE CODE", "time": "SINCE 2024"},
+          { "title": "GENERATIVE AI", "time": "SINCE 2024"}
+        ]
+      },
+      {
+        "name": "VIRTUALIZATION",
+        "experience": [
+          { "title": "VMWARE", "time": "6 MONTHS"},
+          { "title": "VIRTUALBOX", "time": "6 MONTHS"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mobile",
+    "image": "assets/img/Skills/Mobile.png",
+    "description": "My cross-platform background includes Ionic, progressive web applications and earlier work with Android, Xamarin and Unity. This is a complementary area to my main enterprise .NET and Angular specialization.",
+    "descriptionEs": "Mi experiencia multiplataforma incluye Ionic, aplicaciones web progresivas y trabajo previo con Android, Xamarin y Unity. Es un área complementaria a mi especialización principal en .NET y Angular empresarial.",
+    "knowledge": [
+      {
+        "name": "Android",
+        "experience": [
+          { "title": "JAVA", "time": "1 YEAR"},
+          { "title": "SDK", "time": "6 MONTHS"}          
+        ]
+      },
+      {
+        "name": "Cross Platform",
+        "experience": [
+          { "title": "IONIC", "time": "1 YEAR"},
+          { "title": "PWA", "time": "6 MONTHS"},
+          { "title": "XAMARIN", "time": "6 MONTHS"},
+          { "title": "UNITY", "time": "6 MONTHS"}
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Methodology",
+    "image": "assets/img/Skills/Methodology.png",
+    "description": "I have delivered software through Agile, Scrum, Kanban and Waterfall practices. My experience includes coordinating cross-functional teams for insurance initiatives and performing structured testing and technical documentation under CMMI-DEV Level 3.",
+    "descriptionEs": "He entregado software mediante prácticas Agile, Scrum, Kanban y Waterfall. Mi experiencia incluye coordinar equipos multidisciplinarios para iniciativas de seguros y realizar pruebas estructuradas y documentación técnica bajo CMMI-DEV Nivel 3.",
+    "knowledge": [
+      {
+        "experience": [
+          { "title": "WATERFALL", "time": "10+ YEARS"},
+          { "title": "AGILE (SCRUM)", "time": "8+ YEARS"},
+          { "title": "KANBAN", "time": "8+ YEARS"},
+          { "title": "CMMI DEV", "time": "2 YEARS"},
+          { "title": "SPIRAL", "time": "1 YEAR"}
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "initialSection": "presentation",
+  "sections": [
+    {
+      "id": "presentation",
+      "label": "Presentation",
+      "icon": "person-circle-outline",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "icon": "briefcase-outline",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "id": "knowledge",
+      "label": "Knowledge",
+      "icon": "map-outline",
+      "enabled": true,
+      "order": 3
+    }
+  ]
+}

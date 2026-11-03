@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title description">
+  <title id="title">LinkedIn certifications</title>
+  <desc id="description">LinkedIn mark combined with a certificate ribbon.</desc>
+  <circle cx="80" cy="80" r="76" fill="#0a66c2"/>
+  <rect x="32" y="45" width="70" height="60" rx="10" fill="#fff"/>
+  <circle cx="51" cy="64" r="7" fill="#0a66c2"/>
+  <path d="M45 77h12v22H45zm20 0h11v4c4-6 20-8 20 10v8H84V90c0-7-8-7-8 0v9H65z" fill="#0a66c2"/>
+  <circle cx="112" cy="104" r="25" fill="#f7c948" stroke="#fff" stroke-width="5"/>
+  <path d="m99 122-4 30 17-10 15 10-4-31" fill="#e63946" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+  <path d="m102 104 7 7 14-15" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
