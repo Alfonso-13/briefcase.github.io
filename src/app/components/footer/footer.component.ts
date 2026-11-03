@@ -1,28 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { Component, Input } from '@angular/core';
+import { SiteConfig } from 'src/app/interface/site-config';
 
 @Component({
   selector: 'app-footer',
+  standalone: false,
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
+  @Input() siteConfig?: SiteConfig;
 
-  companyName: string = '';
-  urlCompany: string;
-  urlFace: string;
-  urlDeveloper: string;
-
-  constructor() { }
-
-  ngOnInit(): void {
-    /*
-    this.companyName = environment.company;
-    this.urlCompany = environment.urlCompany;
-    this.urlFace = environment.urlFace;
-
-    this.urlDeveloper = environment.urlDeveloper;
-    */
+  get githubUrl(): string {
+    return this.siteConfig?.footer?.url || '#';
   }
 
+  get authorLabel(): string {
+    return this.siteConfig?.footer?.label || 'PORTFOLIO AUTHOR';
+  }
 }

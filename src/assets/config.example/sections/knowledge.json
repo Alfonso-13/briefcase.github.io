@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Front-End",
+    "image": "assets/img/SkillsTransparent/FrontEnd.png",
+    "description": "Example interface-development knowledge domain.",
+    "descriptionEs": "Ejemplo de un área de conocimiento de desarrollo de interfaces.",
+    "knowledge": [
+      {
+        "name": "Frameworks",
+        "experience": [
+          {
+            "title": "ANGULAR",
+            "time": "EXAMPLE",
+            "description": "Replace with verified experience.",
+            "descriptionEs": "Reemplaza con experiencia verificable."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Back-End",
+    "image": "assets/img/SkillsTransparent/BackEnd.png",
+    "description": "Example service-development knowledge domain.",
+    "descriptionEs": "Ejemplo de un área de conocimiento de desarrollo de servicios.",
+    "knowledge": [
+      {
+        "name": "Technology",
+        "experience": [
+          {
+            "title": ".NET",
+            "time": "EXAMPLE",
+            "description": "Replace with verified experience.",
+            "descriptionEs": "Reemplaza con experiencia verificable."
+          }
+        ]
+      }
+    ]
+  }
+]

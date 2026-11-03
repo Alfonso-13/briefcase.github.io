@@ -1,0 +1,17 @@
+{
+  "name": "Portfolio Author",
+  "title": "Full Stack Developer",
+  "titleEs": "Desarrollador Full Stack",
+  "email": "portfolio@example.com",
+  "personalFiles": {
+    "avatarPath": "assets/img/avatar.svg"
+  },
+  "socialMedia": {
+    "urlGithub": "https://github.com/example",
+    "urlLinkedin": "https://www.linkedin.com/in/example"
+  },
+  "footer": {
+    "label": "PORTFOLIO AUTHOR",
+    "url": "https://github.com/example"
+  }
+}

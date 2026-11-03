@@ -1,23 +1,19 @@
-<h1 class="h1">{{title}}</h1>
-<swiper
+<h1 class="h1">{{ title }}</h1>
+<swiper-container
   class="mySwiper swiper-h"
-  [spaceBetween]="50"
-  [pagination]="pagination"
-  [navigation]="true"
-> 
-  <ng-template swiperSlide ngIf="listCards">
-    <swiper
-      [direction]="'vertical'"
-      [spaceBetween]="50"
-      [pagination]="{
-        clickable: true
-      }"
-      [mousewheel]="mousewheel"
+  space-between="50"
+>
+  <swiper-slide *ngIf="listCards.length">
+    <swiper-container
+      direction="vertical"
+      class="swiper-v vertical-cards"
+      space-between="50"
+      pagination="true"
+      mousewheel="true"
     >
-      <ng-template swiperSlide *ngFor="let card of listCards; let index=index">        
+      <swiper-slide *ngFor="let card of listCards">
         <app-card [cardData]="card" class="card-full"></app-card>
-      </ng-template>      
-    </swiper>
-  </ng-template>
-
-</swiper>
+      </swiper-slide>
+    </swiper-container>
+  </swiper-slide>
+</swiper-container>

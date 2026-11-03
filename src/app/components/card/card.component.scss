@@ -1,8 +1,16 @@
-ion-card {
-  margin-top: 10px;
+:host > div {
+  box-sizing: border-box;
+  margin: 6px auto;
   width: 90%;
-  height: 90%;
-  padding-bottom: 0px !important;
+  height: calc(100% - 12px);
+  padding: 16px;
+  border: 1px solid var(--app-border);
+  border-radius: 20px;
+  color: var(--app-text);
+  background: var(--app-surface);
+  box-shadow: 0 16px 42px rgba(74, 8, 23, 0.1);
+  overflow-y: auto;
+  direction: ltr;
 }
 
 ion-avatar {
@@ -10,6 +18,48 @@ ion-avatar {
   height: 100% !important;
   max-width: 150px !important; //any size
   max-height: 150px !important; //any size
+}
+
+ion-avatar.brand-portrait {
+  --border-radius: 22px;
+  width: clamp(118px, 12vw, 168px) !important;
+  height: clamp(104px, 10.6vw, 148px) !important;
+  max-width: none !important;
+  max-height: none !important;
+  overflow: hidden;
+  border: 2px solid color-mix(in srgb, var(--app-accent) 26%, transparent);
+  background: var(--app-accent-strong);
+  box-shadow: 0 14px 32px rgba(133, 0, 24, 0.18);
+}
+
+ion-avatar.brand-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+ion-avatar.knowledge-icon {
+  --border-radius: 50%;
+  box-sizing: border-box;
+  width: clamp(108px, 9vw, 142px) !important;
+  height: clamp(108px, 9vw, 142px) !important;
+  padding: clamp(8px, 0.8vw, 12px);
+  background: radial-gradient(
+    circle at 34% 28%,
+    color-mix(in srgb, var(--app-accent) 72%, white),
+    var(--app-accent-strong) 72%
+  );
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--app-accent) 28%, transparent),
+    0 12px 30px color-mix(in srgb, var(--app-accent-strong) 24%, transparent);
+}
+
+:host ion-avatar.knowledge-icon img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  filter: drop-shadow(0 5px 9px color-mix(in srgb, black 28%, transparent));
 }
 
 .card-content-md {
@@ -20,29 +70,59 @@ ion-avatar {
   overflow-y: auto;
 }
 
+ion-card-title,
+ion-card-subtitle,
+ion-label,
+ion-card-content {
+  color: var(--app-text);
+}
+
+ion-chip {
+  --background: var(--app-accent-soft);
+  --color: var(--app-accent-strong);
+}
+
+.scrollable-content ul,
+ion-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.scrollable-content li {
+  margin: 6px 0;
+  padding: 7px 10px;
+  border-left: 3px solid var(--app-accent);
+  border-radius: 0 9px 9px 0;
+  background: var(--app-surface-alt);
+}
+
+:host > div {
+  scrollbar-color: var(--app-accent-soft) transparent;
+  scrollbar-width: thin;
+}
+
+:host > div::-webkit-scrollbar {
+  width: 8px;
+}
+
+:host > div::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:host > div::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--app-accent-soft);
+  background-clip: padding-box;
+}
+
+:host > div:hover::-webkit-scrollbar-thumb {
+  background: var(--app-accent);
+  background-clip: padding-box;
+}
+
 @media (max-width: 768px) {
   .scrollable-content {
-    max-height: 200px; /* Ajusta la altura para móviles */
     padding: 8px; /* Menor padding en pantallas pequeñas */
-    overflow-y: auto;
-    direction: rtl;
-  }
-  /* Personalizando el scrollbar */
-  ::-webkit-scrollbar {
-    width: 10px; /* Ancho del scrollbar */
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Color del fondo del track */
-    border-radius: 10px; /* Bordes redondeados */
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--bullet-background-active); /* Color del thumb */
-    border-radius: 10px; /* Bordes redondeados */
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Color del thumb cuando se pasa el ratón */
   }
 }

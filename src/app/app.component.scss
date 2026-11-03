@@ -1,0 +1,106 @@
+:host,
+ion-app {
+  width: 100%;
+  height: 100%;
+}
+
+ion-app {
+  display: flex;
+  flex-direction: column;
+  background: var(--app-background);
+}
+
+app-header,
+app-footer {
+  position: relative;
+  z-index: 20;
+  flex: 0 0 auto;
+}
+
+.app-router-shell {
+  position: relative;
+  flex: 1 1 auto;
+  display: block;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.universe-layer {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  color: #fff7f8;
+  background: #050205;
+  animation: universe-enter 320ms ease both;
+}
+
+.universe-layer app-knowledge {
+  min-height: 0;
+}
+
+.universe-toolbar {
+  z-index: 8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 8px clamp(14px, 2.4vw, 32px);
+  border-bottom: 1px solid rgba(255, 126, 149, 0.22);
+  background: rgba(9, 2, 5, 0.94);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.36);
+  backdrop-filter: blur(16px);
+}
+
+.universe-toolbar > span {
+  display: grid;
+}
+
+.universe-toolbar small {
+  color: #ff8297;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.universe-toolbar strong {
+  margin-top: 2px;
+  font-size: 1rem;
+}
+
+.universe-toolbar button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 126, 149, 0.34);
+  border-radius: 13px;
+  color: #fff;
+  background: rgba(188, 0, 38, 0.22);
+  font-size: 1.45rem;
+  cursor: pointer;
+}
+
+.universe-toolbar button:hover,
+.universe-toolbar button:focus-visible {
+  outline: none;
+  background: rgba(188, 0, 38, 0.52);
+  box-shadow: 0 0 22px rgba(255, 40, 78, 0.25);
+}
+
+@keyframes universe-enter {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .universe-layer {
+    animation: none;
+  }
+}

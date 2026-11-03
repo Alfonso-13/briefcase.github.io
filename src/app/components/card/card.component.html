@@ -1,7 +1,9 @@
 <div *ngIf="cardData">
     <h1 *ngIf="cardData.header">{{cardData.header}}</h1>
-    <ion-avatar>
-        <img *ngIf="cardData.avatarImgPath" [src]="cardData.avatarImgPath">
+    <ion-avatar
+        [class.brand-portrait]="cardData.avatarImgPath && !cardData.avatarImgPath.includes('SkillsTransparent')"
+        [class.knowledge-icon]="cardData.avatarImgPath?.includes('SkillsTransparent')">
+        <img *ngIf="cardData.avatarImgPath" [src]="cardData.avatarImgPath" [alt]="cardData.header || cardData.title || ''">
     </ion-avatar>
     <ion-card-header *ngIf="cardData.title || cardData.subtitle">
         <ion-card-subtitle *ngIf="cardData.subtitle">{{cardData.subtitle}}</ion-card-subtitle>

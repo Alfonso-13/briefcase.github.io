@@ -1,5 +1,21 @@
 <ion-app>
-  <app-header [personalData]="personalData"></app-header>
-  <ion-router-outlet id="main-content"></ion-router-outlet>
-  <app-footer></app-footer>
+  <app-header [personalData]="siteConfig" (openUniverse)="showUniverse()"></app-header>
+  <main class="app-router-shell">
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer [siteConfig]="siteConfig"></app-footer>
+
+  <section *ngIf="universeOpen" class="universe-layer" role="dialog" aria-modal="true" [attr.aria-label]="'universe.name' | translate">
+    <div class="universe-toolbar">
+      <span>
+        <small>{{ 'universe.network' | translate }}</small>
+        <strong>{{ 'universe.name' | translate }}</strong>
+      </span>
+      <button type="button" (click)="closeUniverse()" [attr.aria-label]="'universe.close' | translate">×</button>
+    </div>
+    <app-knowledge
+      [title]="'universe.name' | translate"
+      (navigateSection)="navigateFromUniverse($event)"
+    ></app-knowledge>
+  </section>
 </ion-app>

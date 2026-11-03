@@ -1,13 +1,20 @@
 <ion-footer>
-    <ion-toolbar>
-        <ion-buttons slot="end">
-            <ion-button id="gitButton" href="https://github.com/Alfonso-13" target="_blank">
-                <small>
-                    Developed by Alfonso-13
-                </small>                
-                &nbsp;
-                <ion-icon name="code-working"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
+  <ion-toolbar>
+    <div class="footer-shell">
+      <div class="footer-context" [attr.aria-label]="'footer.identity' | translate">
+        <span>
+          <strong>Briefcase</strong>
+          <small>{{ 'footer.tagline' | translate }}</small>
+        </span>
+      </div>
+
+      <a class="watermark" [href]="githubUrl" target="_blank" rel="noopener" [attr.aria-label]="'footer.github' | translate">
+        <span class="watermark-code">&lt;/&gt;</span>
+        <span>
+          <small>{{ 'footer.designed' | translate }}</small>
+          <strong>{{ authorLabel }}</strong>
+        </span>
+      </a>
+    </div>
+  </ion-toolbar>
 </ion-footer>

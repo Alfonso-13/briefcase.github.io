@@ -1,1 +1,160 @@
-<app-slide-cards [title]="'Knowledge'" *ngIf="listCards" [listCards]="listCards">
+<section
+  class="atom-system"
+  [class.is-transitioning]="isTransitioning"
+  [attr.data-zoom-level]="zoomLevel"
+>
+  <canvas
+    #atomCanvas
+    class="atom-canvas"
+    [attr.aria-label]="'universe.canvasAria' | translate"
+  ></canvas>
+
+  <header class="system-heading">
+    <p class="system-instruction">
+      <ng-container [ngSwitch]="zoomLevel">
+        <span *ngSwitchCase="'system'">{{ 'universe.instruction.system' | translate }}</span>
+        <span *ngSwitchCase="'orbit'">{{ 'universe.instruction.orbit' | translate }}</span>
+        <span *ngSwitchCase="'cluster'">{{ 'universe.instruction.cluster' | translate }}</span>
+        <span *ngSwitchCase="'node'">{{ 'universe.instruction.node' | translate }}</span>
+      </ng-container>
+    </p>
+  </header>
+
+  <div class="system-controls" aria-label="Atom controls">
+    <button type="button" class="pause-control" [class.is-paused]="isPaused" (click)="togglePause()">
+      {{ (isPaused ? 'universe.resume' : 'universe.pause') | translate }}
+    </button>
+    <button type="button" class="reset-control" (click)="resetSystem()" [attr.aria-label]="'universe.resetView' | translate">
+      {{ 'universe.reset' | translate }}
+    </button>
+  </div>
+
+  <div class="focus-fade" aria-hidden="true"></div>
+
+  <aside *ngIf="selectedSection as section" class="knowledge-detail section-detail">
+    <button type="button" class="detail-close" (click)="closeDetail()" [attr.aria-label]="'universe.closeDetails' | translate">×</button>
+    <span class="detail-level">{{ (section === 'presentation' ? 'universe.core' : 'universe.belt') | translate }}</span>
+    <h2>{{ (section === 'presentation' ? 'nav.presentation' : 'nav.education') | translate }}</h2>
+    <p>{{ ('universe.summary.' + section) | translate }}</p>
+    <button type="button" class="explore-control" (click)="goToSection(section)">
+      {{ (section === 'presentation' ? 'universe.goToPresentation' : 'universe.goToEducation') | translate }}
+    </button>
+  </aside>
+
+  <aside *ngIf="selected as selection" class="knowledge-detail">
+    <button type="button" class="detail-close" (click)="closeDetail()" [attr.aria-label]="'universe.closeDetails' | translate">×</button>
+    <span class="detail-level">{{ ('universe.' + selection.type) | translate }}</span>
+    <span *ngIf="selection.type !== 'category'" class="detail-path">
+      {{ categoryLabel(selection.category.name) }}
+      <ng-container *ngIf="selection.type === 'experience' && selection.group">
+        / {{ groupLabel(selection.group) }}
+      </ng-container>
+    </span>
+    <h2>{{ selectionLabel(selection) }}</h2>
+
+    <ng-container *ngIf="selection.type === 'category'">
+      <p>{{ categoryDescription(selection.category) }}</p>
+      <div class="category-groups">
+        <button
+          *ngFor="let group of selection.category.knowledge"
+          type="button"
+          class="cluster-card"
+          (mouseenter)="highlightGroup(group)"
+          (mouseleave)="highlightGroup()"
+          (focus)="highlightGroup(group)"
+          (blur)="highlightGroup()"
+          (click)="openGroup(selection.category, group)"
+        >
+          <h3>{{ groupLabel(group) }}</h3>
+          <span class="cluster-count">
+            {{ group.experience.length }} {{ 'knowledge.technologies' | translate }}
+          </span>
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="selection.type === 'group'">
+      <ng-container *ngIf="selection.group as group">
+        <div class="category-groups">
+          <section>
+            <h3>{{ groupLabel(group) }}</h3>
+            <div class="technology-list">
+              <div
+                *ngFor="let experience of group.experience"
+                class="technology-node"
+                (mouseenter)="highlightExperience(experience)"
+                (mouseleave)="highlightExperience()"
+              >
+                <strong>{{ experience.title }}</strong>
+                <small>{{ experienceTime(experience.time) }}</small>
+              </div>
+            </div>
+          </section>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="selection.experience as experience">
+      <p class="experience-time">{{ experienceTime(experience.time) }}</p>
+      <p *ngIf="experienceDescription(experience) as description">{{ description }}</p>
+
+      <div *ngIf="experience.highlights?.length" class="detail-section">
+        <h3>{{ 'universe.highlights' | translate }}</h3>
+        <ul>
+          <li *ngFor="let highlight of experience.highlights">{{ highlight }}</li>
+        </ul>
+      </div>
+
+      <div *ngIf="experience.projects?.length" class="detail-section">
+        <h3>{{ 'universe.projects' | translate }}</h3>
+        <a
+          *ngFor="let project of experience.projects"
+          class="evidence-card"
+          [href]="project.url || null"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>{{ project.name }}</strong>
+          <span *ngIf="projectSummary(project) as summary">{{ summary }}</span>
+        </a>
+      </div>
+
+      <div *ngIf="experience.repositories?.length" class="detail-section">
+        <h3>{{ 'universe.repositories' | translate }}</h3>
+        <a
+          *ngFor="let repository of experience.repositories"
+          class="repository-link"
+          [href]="repository.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ repository.name }} ↗
+        </a>
+      </div>
+    </ng-container>
+
+    <button
+      *ngIf="selection.type === 'category'"
+      type="button"
+      class="explore-control"
+      (click)="goToSection('knowledge')"
+    >
+      {{ 'universe.moreInfo' | translate }}
+    </button>
+
+    <button
+      *ngIf="selection.type === 'group'"
+      type="button"
+      class="explore-control"
+      (click)="returnToCategory()"
+    >
+      {{ 'universe.backToCategory' | translate }}
+    </button>
+  </aside>
+
+  <div class="interaction-hint" aria-hidden="true">
+    <span>{{ 'universe.drag' | translate }}</span>
+    <span>{{ 'universe.select' | translate }}</span>
+    <span>{{ 'universe.hover' | translate }}</span>
+  </div>
+</section>

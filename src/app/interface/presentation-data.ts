@@ -4,5 +4,8 @@ export interface PresentationData {
     title?: string;
     subtitle?: string;
     content?: string;
+    headerEs?: string;
+    titleEs?: string;
+    subtitleEs?: string;
+    contentEs?: string;
 }
-  

@@ -23,10 +23,18 @@ npm-debug.log*
 /.sass-cache
 /.sourcemaps
 /.versions
-/.vscode
+/.vscode/*
+!/.vscode/launch.json
+!/.vscode/tasks.json
 /coverage
 /dist
 /node_modules
 /platforms
 /plugins
 /www
+
+# Local portfolio content and personal brand assets. Public forks start from
+# src/assets/config.example and generate this directory on first run.
+/src/assets/config/
+/src/assets/config.local-backup/
+/src/assets/img/alfonso-13-brand.png

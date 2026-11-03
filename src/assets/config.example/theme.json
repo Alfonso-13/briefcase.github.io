@@ -1,0 +1,33 @@
+{
+  "cacheKey": "briefcase-theme",
+  "defaultMode": "light",
+  "effects": {
+    "sparkles": true
+  },
+  "light": {
+    "background": "#ffffff",
+    "surface": "#ffffff",
+    "surfaceAlt": "#fff5f6",
+    "header": "#ffffff",
+    "footer": "#ffffff",
+    "text": "#211a1b",
+    "muted": "#6f6264",
+    "border": "#eadcdf",
+    "accent": "#c51f3a",
+    "accentStrong": "#850018",
+    "accentSoft": "#ffe0e5"
+  },
+  "dark": {
+    "background": "#101012",
+    "surface": "#1b1a1d",
+    "surfaceAlt": "#25191d",
+    "header": "#171619",
+    "footer": "#171619",
+    "text": "#fff7f8",
+    "muted": "#cdbfc2",
+    "border": "#49343a",
+    "accent": "#ff526b",
+    "accentStrong": "#ff8597",
+    "accentSoft": "#431924"
+  }
+}

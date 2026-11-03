@@ -1,31 +1,67 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import {
+  IonAvatar,
+  IonButton,
+  IonButtons,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonChip,
+  IonFooter,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonPopover,
+  IonToolbar,
+} from '@ionic/angular';
 import { EducationComponent } from '../education/education.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { PresentationComponent } from './presentation/presentation.component';
-import { SwiperModule } from 'swiper/angular';
 import { CardComponent } from './card/card.component';
 import { SlideCardsComponent } from './slide-cards/slide-cards.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
+import { KnowledgeSectionComponent } from './knowledge-section/knowledge-section.component';
+import { TranslatePipe } from '../pipes/translate.pipe';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     PresentationComponent,
-    EducationComponent,    
+    EducationComponent,
     CardComponent,
     SlideCardsComponent,
-    KnowledgeComponent
+    KnowledgeComponent,
+    KnowledgeSectionComponent,
+    TranslatePipe
   ],
   imports: [
-    IonicModule,
     CommonModule,
     FormsModule,
-    SwiperModule
+    IonAvatar,
+    IonButton,
+    IonButtons,
+    IonCard,
+    IonCardContent,
+    IonCardHeader,
+    IonCardSubtitle,
+    IonCardTitle,
+    IonChip,
+    IonFooter,
+    IonHeader,
+    IonIcon,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonPopover,
+    IonToolbar,
   ],
   exports: [
     HeaderComponent,
@@ -34,7 +70,10 @@ import { KnowledgeComponent } from './knowledge/knowledge.component';
     EducationComponent,
     CardComponent,
     SlideCardsComponent,
-    KnowledgeComponent
-  ]
+    KnowledgeComponent,
+    KnowledgeSectionComponent,
+    TranslatePipe
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class ComponentsModule { }

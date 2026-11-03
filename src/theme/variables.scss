@@ -3,13 +3,28 @@
 
 /** Ionic CSS Variables **/
 :root {
+  --app-background: #ffffff;
+  --app-surface: #ffffff;
+  --app-surface-alt: #fff5f6;
+  --app-header: #ffffff;
+  --app-footer: #ffffff;
+  --app-text: #211a1b;
+  --app-muted: #6f6264;
+  --app-border: #eadcdf;
+  --app-accent: #c51f3a;
+  --app-accent-strong: #850018;
+  --app-accent-soft: #ffe0e5;
+
+  --ion-background-color: var(--app-background);
+  --ion-text-color: var(--app-text);
+
   /** primary **/
-  --ion-color-primary: #3880ff;
-  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary: #c51f3a;
+  --ion-color-primary-rgb: 197, 31, 58;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
-  --ion-color-primary-shade: #3171e0;
-  --ion-color-primary-tint: #4c8dff;
+  --ion-color-primary-shade: #ad1b33;
+  --ion-color-primary-tint: #cb354e;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;
@@ -74,6 +89,32 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+}
+
+/* Theme selection is controlled by ThemeService, not by the operating system. */
+html:root body {
+  --ion-background-color: var(--app-background);
+  --ion-text-color: var(--app-text);
+  --ion-border-color: var(--app-border);
+  --ion-item-background: var(--app-surface);
+  --ion-card-background: var(--app-surface);
+  --ion-toolbar-background: var(--app-header);
+  --ion-tab-bar-background: var(--app-footer);
+
+  --ion-color-primary: #c51f3a;
+  --ion-color-primary-rgb: 197, 31, 58;
+  --ion-color-primary-shade: #ad1b33;
+  --ion-color-primary-tint: #cb354e;
+
+  --ion-color-secondary: #a91630;
+  --ion-color-secondary-rgb: 169, 22, 48;
+  --ion-color-secondary-shade: #95132a;
+  --ion-color-secondary-tint: #b22d45;
+
+  --ion-color-tertiary: #7d1025;
+  --ion-color-tertiary-rgb: 125, 16, 37;
+  --ion-color-tertiary-shade: #6e0e21;
+  --ion-color-tertiary-tint: #8a283b;
 }
 
 @media (prefers-color-scheme: dark) {

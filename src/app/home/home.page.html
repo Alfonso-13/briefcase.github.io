@@ -1,17 +1,68 @@
-<app-header></app-header>
 <ion-content [fullscreen]="true">
-  <swiper
-  [pagination]="pagination"
-  [navigation]="true"
->
-  <ng-template swiperSlide >
-    <app-presentation #Presentation class="card-full"></app-presentation>
-  </ng-template>
-  <ng-template swiperSlide >
-    <app-education #Education class="card-full"></app-education>
-  </ng-template>
-  <ng-template swiperSlide>
-    <app-knowledge #Knowledge class="card-full"></app-knowledge>
-  </ng-template>
-</swiper>
+  <section class="portfolio-shell" *ngIf="sections.length">
+    <nav class="section-nav" [attr.aria-label]="'nav.sections' | translate">
+      <button
+        *ngFor="let section of sections; let index = index; trackBy: trackSection"
+        type="button"
+        [class.is-active]="activeSectionIndex === index"
+        [attr.aria-current]="activeSectionIndex === index ? 'page' : null"
+        (click)="goToSection(index)"
+      >
+        <span class="section-index">0{{ index + 1 }}</span>
+        <span>{{ ('nav.' + section.id) | translate }}</span>
+      </button>
+    </nav>
+
+    <div class="portfolio-stage">
+      <button
+        class="section-arrow section-arrow--previous"
+        type="button"
+        [attr.aria-label]="'nav.previous' | translate"
+        [disabled]="activeSectionIndex === 0"
+        (click)="goToSection(activeSectionIndex - 1)"
+      ><span aria-hidden="true"></span></button>
+
+      <swiper-container
+        #mainSwiper
+        class="main-swiper"
+        effect="fade"
+        speed="420"
+        (swiperslidechange)="handleSlideChange($event)"
+      >
+        <swiper-slide
+          *ngFor="let section of sections; trackBy: trackSection"
+        >
+          <ng-container [ngSwitch]="section.id">
+            <app-presentation
+              *ngSwitchCase="'presentation'"
+              [title]="('nav.' + section.id) | translate"
+              class="card-full"
+            ></app-presentation>
+            <app-education
+              *ngSwitchCase="'education'"
+              [title]="('nav.' + section.id) | translate"
+              class="card-full"
+            ></app-education>
+            <app-knowledge-section
+              *ngSwitchCase="'knowledge'"
+              [title]="('nav.' + section.id) | translate"
+              class="card-full"
+            ></app-knowledge-section>
+          </ng-container>
+        </swiper-slide>
+      </swiper-container>
+
+      <button
+        class="section-arrow section-arrow--next"
+        type="button"
+        [attr.aria-label]="'nav.next' | translate"
+        [disabled]="activeSectionIndex === sections.length - 1"
+        (click)="goToSection(activeSectionIndex + 1)"
+      ><span aria-hidden="true"></span></button>
+    </div>
+
+    <p class="section-status" aria-live="polite">
+      {{ activeSectionIndex + 1 }} / {{ sections.length }} · {{ ('nav.' + sections[activeSectionIndex].id) | translate }}
+    </p>
+  </section>
 </ion-content>

@@ -1,5 +1,5 @@
 
-export interface CardData {    
+export interface CardData {
     header?: string;
     avatarImgPath?: string;
     subtitle?: string;
