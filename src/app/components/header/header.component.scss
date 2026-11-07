@@ -224,7 +224,7 @@ ion-toolbar {
   display: flex;
 }
 
-/* Mostrar los botones de contacto directamente en pantallas más grandes */
+/* Show direct contact actions on larger screens. */
 @media (min-width: 768px) {
   .contact-buttons-large {
     display: flex;
