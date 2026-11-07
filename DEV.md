@@ -195,10 +195,10 @@ Angular conserva `SeoService` para aplicar los metadatos en runtime. Además, el
 
 - title, description y keywords;
 - canonical absoluto;
-- Open Graph con imagen y texto alternativo;
+- Open Graph con URL segura, formato, dimensiones y texto alternativo;
 - Twitter Card de imagen grande.
 
-Las rutas relativas de imagen se resuelven contra `canonicalUrl`. La vista previa pública usa `assets/img/social-preview.png`; la configuración local puede sustituir título, descripción, canonical e imagen sin publicar identidad en `main`.
+Las rutas relativas de imagen se resuelven contra `canonicalUrl`. La vista previa pública usa `assets/img/social.jpg` en 1200 × 630; la configuración local puede sustituir título, descripción, canonical e imagen sin publicar identidad en `main`.
 
 - `HeaderComponent` presenta logo, nombre, profesión, contacto y selector de tema. En móvil conserva la identidad y compacta los enlaces sociales en un menú.
 - El acceso `My Universe` del header es independiente de la navegación de secciones; en móvil conserva el icono y oculta sólo su etiqueta.

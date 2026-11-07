@@ -35,6 +35,9 @@ function renderTags(config) {
   const canonicalUrl = escapeAttribute(config.canonicalUrl);
   const image = escapeAttribute(absoluteUrl(config.image, config.canonicalUrl));
   const imageAlt = escapeAttribute(config.imageAlt || config.title);
+  const imageType = escapeAttribute(config.imageType || 'image/jpeg');
+  const imageWidth = escapeAttribute(config.imageWidth || 1200);
+  const imageHeight = escapeAttribute(config.imageHeight || 630);
   const keywords = escapeAttribute((config.keywords || []).join(', '));
 
   return `<!-- SEO_CONFIG_START: generated from assets/config/seo.json. -->
@@ -47,6 +50,10 @@ function renderTags(config) {
   <meta property="og:description" content="${description}" />
   <meta property="og:url" content="${canonicalUrl}" />
   <meta property="og:image" content="${image}" />
+  <meta property="og:image:secure_url" content="${image}" />
+  <meta property="og:image:type" content="${imageType}" />
+  <meta property="og:image:width" content="${imageWidth}" />
+  <meta property="og:image:height" content="${imageHeight}" />
   <meta property="og:image:alt" content="${imageAlt}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${title}" />

@@ -6,4 +6,7 @@ export interface SeoConfig {
   canonicalUrl: string;
   image?: string;
   imageAlt?: string;
+  imageType?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 }

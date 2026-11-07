@@ -27,12 +27,25 @@ export class SeoService {
     if (config.image) {
       const imageUrl = this.resolveUrl(config.image, config.canonicalUrl);
       this.meta.updateTag({ property: 'og:image', content: imageUrl });
+      this.meta.updateTag({ property: 'og:image:secure_url', content: imageUrl });
       this.meta.updateTag({ name: 'twitter:image', content: imageUrl });
     }
 
     if (config.imageAlt) {
       this.meta.updateTag({ property: 'og:image:alt', content: config.imageAlt });
       this.meta.updateTag({ name: 'twitter:image:alt', content: config.imageAlt });
+    }
+
+    if (config.imageType) {
+      this.meta.updateTag({ property: 'og:image:type', content: config.imageType });
+    }
+
+    if (config.imageWidth) {
+      this.meta.updateTag({ property: 'og:image:width', content: String(config.imageWidth) });
+    }
+
+    if (config.imageHeight) {
+      this.meta.updateTag({ property: 'og:image:height', content: String(config.imageHeight) });
     }
 
     let canonical = this.document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');

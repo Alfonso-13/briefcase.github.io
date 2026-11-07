@@ -4,7 +4,7 @@ Briefcase is a configurable portfolio and technical showcase that presents profe
 
 The project is a static Angular application designed for GitHub Pages. Content lives in JSON files, so copy and evidence can be updated without recompiling individual UI components.
 
-![Briefcase professional universe](src/assets/img/social-preview.png)
+![Briefcase professional universe](src/assets/img/social.jpg)
 
 ## Engineering highlights
 
