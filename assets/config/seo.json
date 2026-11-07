@@ -9,6 +9,9 @@
     "Software Engineer"
   ],
   "canonicalUrl": "https://alfonso-13.github.io/briefcase.github.io/",
-  "image": "https://alfonso-13.github.io/briefcase.github.io/assets/img/social-preview.png",
-  "imageAlt": "Briefcase professional universe with a solar core, asteroid belt and orbiting knowledge worlds"
+  "image": "https://alfonso-13.github.io/briefcase.github.io/assets/img/social.jpg",
+  "imageAlt": "Briefcase professional universe with a solar core, asteroid belt and orbiting knowledge worlds",
+  "imageType": "image/jpeg",
+  "imageWidth": 1200,
+  "imageHeight": 630
 }
