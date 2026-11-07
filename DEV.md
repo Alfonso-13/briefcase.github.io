@@ -177,6 +177,16 @@ Las posiciones expresan jerarquía, no geografía. Los dominios se distribuyen e
 
 ## Shell visual y navegación
 
+### Entrada cinemática
+
+`PortfolioIntroComponent` sustituye una espera genérica por una presentación semántica del producto. La animación se monta sobre el shell ya inicializado, dura un máximo de 5 segundos y se retira tanto por `animationend` como mediante un temporizador de respaldo.
+
+- La clave de sesión `briefcase.portfolio-intro.v1` evita repetirla durante la misma pestaña.
+- El parámetro `?intro=1` fuerza una repetición para demostración y QA.
+- `prefers-reduced-motion: reduce` impide que el componente se renderice.
+- La lógica de decisión permanece aislada en `portfolio-intro.utils.ts` y cubierta por pruebas unitarias.
+- Header, contenido y footer se revelan de forma coordinada sin condicionar la carga de JSON ni la navegación.
+
 - `HeaderComponent` presenta logo, nombre, profesión, contacto y selector de tema. En móvil conserva la identidad y compacta los enlaces sociales en un menú.
 - El acceso `My Universe` del header es independiente de la navegación de secciones; en móvil conserva el icono y oculta sólo su etiqueta.
 - `HomePage` controla la sección activa y sincroniza pestañas, swipe, flechas y teclado con la instancia principal de Swiper. `←/→` cambia de sección con fade y `↑/↓` recorre las tarjetas verticales activas.

@@ -29,6 +29,7 @@ import { SlideCardsComponent } from './slide-cards/slide-cards.component';
 import { KnowledgeComponent } from './knowledge/knowledge.component';
 import { KnowledgeSectionComponent } from './knowledge-section/knowledge-section.component';
 import { TranslatePipe } from '../pipes/translate.pipe';
+import { PortfolioIntroComponent } from './portfolio-intro/portfolio-intro.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TranslatePipe } from '../pipes/translate.pipe';
     SlideCardsComponent,
     KnowledgeComponent,
     KnowledgeSectionComponent,
-    TranslatePipe
+    TranslatePipe,
+    PortfolioIntroComponent
   ],
   imports: [
     CommonModule,
@@ -72,7 +74,8 @@ import { TranslatePipe } from '../pipes/translate.pipe';
     SlideCardsComponent,
     KnowledgeComponent,
     KnowledgeSectionComponent,
-    TranslatePipe
+    TranslatePipe,
+    PortfolioIntroComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
