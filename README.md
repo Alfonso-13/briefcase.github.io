@@ -7,6 +7,7 @@ El proyecto está construido como una aplicación estática para GitHub Pages. E
 ## Qué demuestra
 
 - Angular 22 e Ionic 9 sobre Node.js 26 LTS.
+- Entrada cinemática del universo, reproducida una vez por sesión y accesible para usuarios con movimiento reducido.
 - Un sistema orbital WebGL independiente con Three.js, rotación manual, órbitas 3D, cinturón educativo, hover luminoso y niveles semánticos.
 - Ambientación desacoplada del mapa con asteroides, cometas y estrellas fugaces de trayectorias diagonales aleatorias, además de un púlsar de aparición única.
 - Navegación adaptable para escritorio, móvil, rueda y gestos táctiles.
@@ -41,6 +42,8 @@ Las pestañas superiores cambian directamente entre las tres secciones y las fle
 El activo principal de marca se define en `site.json` y puede reutilizarse en header y presentación. El footer obtiene su firma y enlace desde la misma configuración, sin identidades codificadas en los componentes.
 
 El selector `EN/ES` del header cambia toda la interfaz y los textos principales. La selección se guarda con la clave `briefcase-language`; cuando no existe una preferencia previa, inicia en inglés.
+
+La primera visita de cada sesión presenta una secuencia breve de ignición: aparece el núcleo de Presentation, se forma el cinturón de Education y los dominios de Knowledge entran en órbita antes de revelar la interfaz. No representa progreso de descarga ni retrasa la inicialización de Angular. Se omite con `prefers-reduced-motion` y puede repetirse para demostración agregando `?intro=1` a la URL.
 
 ## Ejecutar localmente
 

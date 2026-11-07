@@ -1,0 +1,55 @@
+<section
+  *ngIf="visible"
+  class="portfolio-intro"
+  aria-hidden="true"
+  (animationend)="onAnimationEnd($event)"
+>
+  <div class="intro-nebula"></div>
+
+  <div class="intro-stars">
+    <i
+      *ngFor="let star of stars"
+      [style.left.%]="star.x"
+      [style.top.%]="star.y"
+      [style.width.px]="star.size"
+      [style.height.px]="star.size"
+      [style.animation-delay.ms]="star.delay"
+    ></i>
+  </div>
+
+  <div class="intro-content">
+    <div class="intro-system">
+      <div class="intro-orbit intro-orbit--outer">
+        <span class="intro-planet intro-planet--gold"><i></i></span>
+      </div>
+      <div class="intro-orbit intro-orbit--middle">
+        <span class="intro-planet intro-planet--blue"><i></i></span>
+      </div>
+      <div class="intro-orbit intro-orbit--inner">
+        <span class="intro-planet intro-planet--rose"><i></i></span>
+      </div>
+
+      <div class="intro-belt">
+        <i
+          *ngFor="let asteroid of asteroids"
+          [style.width.px]="asteroid.size"
+          [style.height.px]="asteroid.size"
+          [style.transform]="'rotate(' + asteroid.angle + 'deg) translateX(' + asteroid.radius + 'px)'"
+        ></i>
+      </div>
+
+      <div class="intro-sun" aria-hidden="true">
+        <span class="intro-sun-surface"></span>
+        <i class="intro-flare intro-flare--one"></i>
+        <i class="intro-flare intro-flare--two"></i>
+        <i class="intro-flare intro-flare--three"></i>
+      </div>
+    </div>
+
+    <div class="intro-copy">
+      <small>PROFESSIONAL UNIVERSE</small>
+      <strong>BRIEFCASE</strong>
+      <span><i></i> Identity · Education · Knowledge <i></i></span>
+    </div>
+  </div>
+</section>

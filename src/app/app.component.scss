@@ -99,8 +99,41 @@ app-footer {
   }
 }
 
+:host-context(.portfolio-intro-playing) app-header {
+  animation: portfolio-header-enter 700ms 3.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+:host-context(.portfolio-intro-playing) .app-router-shell {
+  animation: portfolio-content-enter 760ms 3.82s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+:host-context(.portfolio-intro-playing) app-footer {
+  animation: portfolio-footer-enter 680ms 3.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes portfolio-header-enter {
+  from { opacity: 0; transform: translateY(-24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes portfolio-content-enter {
+  from { opacity: 0; transform: scale(0.985); filter: blur(10px); }
+  to { opacity: 1; transform: scale(1); filter: blur(0); }
+}
+
+@keyframes portfolio-footer-enter {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .universe-layer {
+    animation: none;
+  }
+
+  :host-context(.portfolio-intro-playing) app-header,
+  :host-context(.portfolio-intro-playing) .app-router-shell,
+  :host-context(.portfolio-intro-playing) app-footer {
     animation: none;
   }
 }
