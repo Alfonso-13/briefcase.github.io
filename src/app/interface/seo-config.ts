@@ -5,4 +5,5 @@ export interface SeoConfig {
   keywords: string[];
   canonicalUrl: string;
   image?: string;
+  imageAlt?: string;
 }

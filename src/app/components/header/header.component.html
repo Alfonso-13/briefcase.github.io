@@ -26,14 +26,14 @@
       </ion-button>
     </ion-buttons>
 
-    <!-- Botón de menú desplegable para pantallas pequeñas -->
+    <!-- Compact contact menu for small screens. -->
     <ion-buttons slot="end" class="contact-button-small">
       <ion-button (click)="openContactMenu($event)" [attr.aria-label]="'header.openContacts' | translate">
         <ion-icon name="person-circle-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
 
-    <!-- Botones de contacto que solo se muestran en pantallas grandes -->
+    <!-- Direct contact actions for larger screens. -->
     <ion-buttons slot="end" class="contact-buttons-large">
       <ion-button id="mailButton" [href]="emailHref" [attr.aria-label]="'header.sendEmail' | translate">
         <ion-icon name="mail"></ion-icon>
@@ -69,7 +69,7 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- Popover para menú de contacto en pantallas pequeñas -->
+<!-- Contact popover used on small screens. -->
 <ion-popover
   [event]="contactMenuEvent"
   [isOpen]="contactMenuOpen"

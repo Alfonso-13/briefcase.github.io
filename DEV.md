@@ -109,7 +109,7 @@ En **Run and Debug**, selecciona `Briefcase: Angular + Chrome`. Para depurar el 
 | `site.json` | Identidad, datos personales, contacto, perfiles públicos y footer |
 | `navigation.json` | Orden, etiqueta, icono y visibilidad de secciones |
 | `theme.json` | Tokens de color y modo predeterminado |
-| `seo.json` | Idioma, title, description, keywords, canonical y Open Graph |
+| `seo.json` | Idioma, title, description, keywords, canonical, Open Graph y Twitter Card |
 | `sections/presentation.json` | Tarjetas de presentación |
 | `sections/education.json` | Formación, cursos, certificaciones e insignias públicas |
 | `sections/knowledge.json` | Rubros, stacks, tecnologías y evidencias |
@@ -181,11 +181,24 @@ Las posiciones expresan jerarquía, no geografía. Los dominios se distribuyen e
 
 `PortfolioIntroComponent` sustituye una espera genérica por una presentación semántica del producto. La animación se monta sobre el shell ya inicializado, dura un máximo de 5 segundos y se retira tanto por `animationend` como mediante un temporizador de respaldo.
 
+La secuencia representa el sistema solar profesional: enciende un núcleo solar, forma un cinturón de asteroides y pone tres planetas en movimiento antes de revelar la interfaz. No representa un porcentaje de descarga.
+
 - La clave de sesión `briefcase.portfolio-intro.v1` evita repetirla durante la misma pestaña.
 - El parámetro `?intro=1` fuerza una repetición para demostración y QA.
 - `prefers-reduced-motion: reduce` impide que el componente se renderice.
 - La lógica de decisión permanece aislada en `portfolio-intro.utils.ts` y cubierta por pruebas unitarias.
 - Header, contenido y footer se revelan de forma coordinada sin condicionar la carga de JSON ni la navegación.
+
+### SEO estático y vista previa social
+
+Angular conserva `SeoService` para aplicar los metadatos en runtime. Además, el `postbuild` ejecuta `scripts/inject-seo.mjs`, lee el `assets/config/seo.json` efectivo y reemplaza el bloque marcado en `www/browser/index.html`. Así, crawlers que no ejecutan JavaScript reciben desde el primer HTML:
+
+- title, description y keywords;
+- canonical absoluto;
+- Open Graph con imagen y texto alternativo;
+- Twitter Card de imagen grande.
+
+Las rutas relativas de imagen se resuelven contra `canonicalUrl`. La vista previa pública usa `assets/img/social-preview.png`; la configuración local puede sustituir título, descripción, canonical e imagen sin publicar identidad en `main`.
 
 - `HeaderComponent` presenta logo, nombre, profesión, contacto y selector de tema. En móvil conserva la identidad y compacta los enlaces sociales en un menú.
 - El acceso `My Universe` del header es independiente de la navegación de secciones; en móvil conserva el icono y oculta sólo su etiqueta.

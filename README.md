@@ -1,110 +1,121 @@
 # Briefcase · Portfolio & My Universe
 
-Portafolio web configurable y proyecto de presentación técnica que reúne experiencia, formación y conocimientos profesionales en tres secciones detalladas: Presentation, Education y Knowledge. Una experiencia 3D independiente, **My Universe**, transforma ese contenido en un sistema solar profesional: Presentation vive en el núcleo solar, Education es un cinturón continuo y Knowledge se distribuye como una red exterior de dominios, clusters y nodos tecnológicos.
+Briefcase is a configurable portfolio and technical showcase that presents professional experience, education and knowledge through three detailed sections: Presentation, Education and Knowledge. Its independent **My Universe** experience transforms the same content into a professional solar system: Presentation is the solar core, Education is a continuous asteroid belt, and Knowledge forms an outer network of domains, clusters and technology nodes.
 
-El proyecto está construido como una aplicación estática para GitHub Pages. El contenido se mantiene en archivos JSON, sin recompilar componentes para actualizar textos o evidencias.
+The project is a static Angular application designed for GitHub Pages. Content lives in JSON files, so copy and evidence can be updated without recompiling individual UI components.
 
-## Qué demuestra
+![Briefcase professional universe](src/assets/img/social-preview.png)
 
-- Angular 22 e Ionic 9 sobre Node.js 26 LTS.
-- Entrada cinemática del universo, reproducida una vez por sesión y accesible para usuarios con movimiento reducido.
-- Un sistema orbital WebGL independiente con Three.js, rotación manual, órbitas 3D, cinturón educativo, hover luminoso y niveles semánticos.
-- Ambientación desacoplada del mapa con asteroides, cometas y estrellas fugaces de trayectorias diagonales aleatorias, además de un púlsar de aparición única.
-- Navegación adaptable para escritorio, móvil, rueda y gestos táctiles.
-- Navegación directa entre Presentation, Education y Knowledge, con estado visible y controles accesibles.
-- Identidad configurable en presentación, encabezado y watermark permanente del footer.
-- Tema claro/oscuro, metadatos configurables y contenido desacoplado del código.
-- Interfaz bilingüe EN/ES con inglés predeterminado y preferencia persistida en `localStorage`.
-- Build estático reproducible para GitHub Pages.
-- Scripts de NVM y configuración de depuración para VS Code.
+## Engineering highlights
+
+- Angular 22 and Ionic 9 on Node.js 26 LTS.
+- A cinematic solar-system entrance that plays once per browser session and respects reduced-motion preferences.
+- An independent Three.js WebGL system with manual rotation, 3D orbits, an education belt, illuminated hover states and semantic exploration levels.
+- Camera-independent environmental events with randomized asteroids, comets and shooting stars, plus a one-time pulsar easter egg.
+- Responsive desktop, mobile, wheel, touch and keyboard navigation.
+- Direct navigation between Presentation, Education and Knowledge with accessible controls and visible state.
+- Configurable identity across the presentation, header and permanent footer watermark.
+- Light and dark themes, bilingual EN/ES content and persistent language preference.
+- Build-time SEO injection for crawler-readable Open Graph, Twitter Card and canonical metadata.
+- A reproducible static GitHub Pages deployment.
+- NVM scripts and VS Code debugging configuration.
 
 ## My Universe
 
-El icono de mundo-red que gira en el header abre My Universe sobre el portafolio sin convertirlo en una cuarta sección. Presentation, Education y Knowledge continúan disponibles en la navegación principal; cerrar la experiencia regresa exactamente a la sección activa.
+The rotating network-world icon in the header opens My Universe as an overlay without turning it into a fourth portfolio section. Closing the experience returns to the previously active section.
 
-La visualización usa cuatro niveles:
+The visualization uses four semantic levels:
 
-1. **System**: muestra núcleo, órbita Education y red exterior Knowledge.
-2. **Orbit**: permite seleccionar Education o un dominio profesional.
-3. **Cluster**: revela stacks y áreas de práctica alrededor de cada dominio.
-4. **Node**: cada tecnología presenta experiencia y, cuando están configurados, proyectos y repositorios.
+1. **System** shows the solar core, Education belt and outer Knowledge network.
+2. **Orbit** focuses Education or a professional domain.
+3. **Cluster** reveals stacks and practice areas within a domain.
+4. **Node** presents a technology's experience and, when configured, its projects and repositories.
 
-El núcleo y la órbita Education permiten volver a sus secciones con una transición fade. Education se representa sólo mediante el anillo completo y luminoso, sin satélites propios; su etiqueta viaja con el cinturón. Cada dominio de Knowledge usa su propia órbita 3D, color y brillo aditivo. Los sistemas ocupan capas radiales separadas para evitar colisiones; sus clusters orbitan localmente al dominio y las tecnologías orbitan al cluster. Todos los nodos permanecen visibles desde la vista general.
+Presentation and Education can return to their portfolio sections through a fade transition. Education is represented by one complete luminous belt with no satellites of its own. Every Knowledge domain has its own 3D orbit, color and additive glow; clusters orbit their domain and technologies orbit their cluster. Radial separation keeps the systems readable and prevents collisions.
 
-El núcleo usa una superficie solar procedural con glow, pulsos y pequeñas llamaradas. Los eventos ambientales viven en una capa de fondo fija a cámara: no rotan con el mapa, no aparecen dentro de las vistas enfocadas y sólo se eliminan después de abandonar completamente el encuadre. El púlsar es un easter egg de ocho segundos que aparece una sola vez, en un momento aleatorio entre los minutos 15 y 30 de permanencia en la vista general.
+The core uses a procedural solar surface, glow and periodic pulses. Environmental events remain fixed to the camera background, never rotate with the professional map and appear only in the system view. The pulsar is an eight-second easter egg that appears once after a random 15-to-30-minute delay.
 
-El control Pause/Resume detiene o reanuda el sistema. Seleccionar un dominio pausa automáticamente, centra el elemento y conserva el panel abierto con sus clusters, tecnologías y experiencia completa. El zoom libre de rueda está deshabilitado para mantener estable la composición; la profundidad cambia únicamente mediante la navegación semántica entre niveles.
+Pause/Resume controls the orbital system. Selecting an element focuses it, keeps the relevant detail panel open and uses semantic navigation instead of unrestricted wheel zoom.
 
-## Navegación e identidad
+## Navigation and cinematic entrance
 
-Las pestañas superiores cambian directamente entre las tres secciones y las flechas laterales permiten recorrerlas en orden. En Education y Knowledge, la rueda, el gesto vertical, `↑/↓` y el indicador de puntos recorren las tarjetas internas sin mezclar esos controles con la navegación principal. Knowledge divide automáticamente los dominios extensos en tarjetas de hasta seis tecnologías para evitar contenido cortado o scroll interno excesivo.
+The top tabs switch directly between the three portfolio sections, while the side arrows move through them in order. In Education and Knowledge, the mouse wheel, vertical gesture, `↑/↓` keys and dot indicator navigate internal cards without conflicting with section navigation. Knowledge automatically splits large domains into cards of up to six technologies.
 
-El activo principal de marca se define en `site.json` y puede reutilizarse en header y presentación. El footer obtiene su firma y enlace desde la misma configuración, sin identidades codificadas en los componentes.
+On the first visit of each browser session, Briefcase presents a short solar-system ignition: the sun appears, the asteroid belt forms and planets enter their orbits before the application shell is revealed. It is a presentation layer rather than a download indicator and does not delay Angular initialization. It is skipped when `prefers-reduced-motion` is active and can be replayed with `?intro=1`.
 
-El selector `EN/ES` del header cambia toda la interfaz y los textos principales. La selección se guarda con la clave `briefcase-language`; cuando no existe una preferencia previa, inicia en inglés.
+## Run locally
 
-La primera visita de cada sesión presenta una secuencia breve de ignición: aparece el núcleo de Presentation, se forma el cinturón de Education y los dominios de Knowledge entran en órbita antes de revelar la interfaz. No representa progreso de descarga ni retrasa la inicialización de Angular. Se omite con `prefers-reduced-motion` y puede repetirse para demostración agregando `?intro=1` a la URL.
-
-## Ejecutar localmente
-
-Requiere NVM para Windows. El proyecto fija Node.js **26.13.0** en `.nvmrc`.
+NVM for Windows is required. The project pins Node.js **26.13.0** in `.nvmrc`.
 
 ```powershell
 git clone https://github.com/Alfonso-13/briefcase.github.io.git
 cd briefcase.github.io
 nvm list
-nvm install 26.13.0 64   # sólo si no aparece instalada
+nvm install 26.13.0 64   # Only when the version is not installed yet.
 .\run-local.ps1
 ```
 
-El script selecciona la versión indicada por `.nvmrc`, fuerza el ejecutable correcto aunque el `PATH` conserve otra versión, instala dependencias cuando faltan y levanta la aplicación en [http://localhost:8100](http://localhost:8100).
+The script selects the version from `.nvmrc`, resolves the matching executable even when `PATH` still points to another Node version, installs missing dependencies and serves the application at [http://localhost:8100](http://localhost:8100).
 
-Modos adicionales:
+Additional modes:
 
 ```powershell
-.\run-local.ps1 -Production # servidor local con configuración de producción
-.\run-local.ps1 -Verify     # lint, pruebas y build
-.\run-local.ps1 -Network    # acceso desde otros dispositivos de la red
+.\run-local.ps1 -Production # Local server with production configuration.
+.\run-local.ps1 -Verify     # Lint, tests and production build.
+.\run-local.ps1 -Network    # Access from other devices on the network.
 ```
 
-## Configurar contenido
+## Configure the portfolio
 
-El repositorio incluye configuración ficticia y reutilizable en `src/assets/config.example/`. En la primera ejecución, `npm run prepare:config` la copia a `src/assets/config/` sólo cuando todavía no existe una configuración local. Esa carpeta queda ignorada por Git para evitar publicar identidad o datos profesionales por accidente.
+Reusable fictional configuration lives in `src/assets/config.example/`. On first run, `npm run prepare:config` copies it to `src/assets/config/` only when local configuration does not exist. The generated folder is ignored by Git so personal identity and professional data are not committed accidentally.
 
-Los archivos editables locales son:
+Local configuration files:
 
-- `site.json`: identidad, contacto, perfiles públicos y pie de página.
-- `navigation.json`: secciones visibles y orden.
-- `theme.json`: paletas y modo predeterminado.
-- `seo.json`: título, descripción, canonical y Open Graph.
-- `sections/`: presentación, formación y mundo de conocimiento.
+- `site.json`: identity, contact links, public profiles and footer.
+- `navigation.json`: visible sections and ordering.
+- `theme.json`: color palettes and default mode.
+- `seo.json`: language, title, description, keywords, canonical URL, Open Graph image and accessible image text.
+- `sections/`: presentation, education and knowledge content.
 
-La formación enlaza únicamente perfiles públicos configurados (LinkedIn Certifications, Skillsoft, HackerRank, Udemy y Codewars). Los datos profesionales de presentación y experiencia se mantienen en los JSON; los PDF de CV/résumé no se publican como assets del sitio.
+During a production build, `scripts/inject-seo.mjs` reads the effective `seo.json` and writes crawler-readable metadata directly into the generated `index.html`. Relative image paths are converted to absolute URLs from the canonical address. Angular applies the same values at runtime.
 
-Los iconos originales de Knowledge permanecen en `src/assets/img/Skills/`. Las copias transparentes y recortadas usadas por el tema viven en `src/assets/img/SkillsTransparent/`; se regeneran con `scripts/remove-image-background.ps1` y su fondo visual se aplica desde CSS mediante los tokens de la paleta activa. Los logos, retratos y archivos de marca personales deben mantenerse fuera de Git.
+Education links only to configured public profiles such as LinkedIn Certifications, Skillsoft, HackerRank, Udemy and Codewars. Résumé PDFs and private identity assets are not published with the reusable source.
 
-La guía de arquitectura, contrato JSON, comandos, depuración, build y publicación está en [DEV.md](DEV.md).
+Original Knowledge icons live in `src/assets/img/Skills/`; transparent themed copies live in `src/assets/img/SkillsTransparent/`. Personal portraits and brand files must remain outside Git.
 
-## Modelo de ramas
+Architecture, JSON contracts, debugging, build and deployment details are documented in [DEV.md](DEV.md).
 
-| Rama | Contenido | Regla |
-| --- | --- | --- |
-| `main` | Código fuente, documentación, pruebas, scripts y configuración ficticia de `src/assets/config.example/` | No contiene configuración personal ni identidad privada. |
-| `gh-pages` | Resultado generado de `www/`, incluida la configuración local publicada como `assets/config/` | No se edita a mano ni funciona como fuente del proyecto. |
+## Branch model and deployment
 
-El flujo esperado es cambiar y validar en `main`, generar `www/` y publicar ese resultado en `gh-pages`. La publicación no ocurre automáticamente al compilar y debe ejecutarse sólo después de revisar el diff y autorizar el cambio remoto:
+| Branch | Responsibility |
+| --- | --- |
+| `main` | Source code, documentation, tests, scripts and fictional `config.example` data. It does not contain local identity configuration. |
+| `gh-pages` | Generated `www/browser/` artifact, including the local configuration selected for publication. It is never edited manually. |
+
+Validate and publish explicitly:
 
 ```powershell
 npm run verify
 npm run deploy:pages
 ```
 
-`deploy:pages` crea el build y publica `www/browser/` mediante un worktree temporal de Git. El comando modifica la rama remota `gh-pages`, por lo que no debe usarse para una validación local ordinaria.
+`deploy:pages` builds the application and publishes `www/browser/` through a temporary Git worktree. A successful local build does not prove that GitHub Pages has been updated; the public URL must be verified independently.
 
-## Alcance
+## Scope
 
-Briefcase es un portafolio estático. No incluye backend, autenticación ni persistencia remota. Los proyectos y repositorios sólo se muestran cuando existen en la configuración; la aplicación no inventa evidencias ausentes.
+Briefcase is a static portfolio. It has no backend, authentication or remote persistence. Projects and repositories appear only when configured; the application never invents missing evidence.
 
-## Licencia
+## License
 
-El código fuente se distribuye bajo [licencia MIT](LICENSE). La identidad personal, biografías, CV, fotografías, logotipos y registros profesionales quedan fuera de ese permiso reutilizable y deben reemplazarse en cualquier fork. Consulta [ASSETS-LICENSE.md](ASSETS-LICENSE.md) para el alcance de contenido y recursos.
+Source code is distributed under the [MIT License](LICENSE). Personal identity, biographies, résumés, photographs, logos and professional records are excluded from that reusable grant and must be replaced in any fork. See [ASSETS-LICENSE.md](ASSETS-LICENSE.md) for asset and content boundaries.
+
+<details>
+<summary><strong>Resumen en español</strong></summary>
+
+Briefcase es un portafolio configurable construido con Angular, Ionic y Three.js. Presenta experiencia, educación y conocimientos en secciones tradicionales y en **My Universe**, un sistema solar interactivo donde Presentation es el núcleo, Education es un cinturón y Knowledge se organiza en dominios, clusters y tecnologías.
+
+El contenido personal se mantiene en una configuración local ignorada por Git, mientras `main` conserva una plantilla ficticia reutilizable. El build inyecta SEO estático, Open Graph, Twitter Card y canonical desde `seo.json`; `gh-pages` contiene únicamente el artefacto publicado.
+
+Para ejecutar localmente usa Node.js 26.13.0 mediante NVM y `.\run-local.ps1`. Para validar y publicar utiliza `npm run verify` y `npm run deploy:pages`.
+
+</details>

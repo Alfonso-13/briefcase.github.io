@@ -16,8 +16,8 @@
 ion-avatar {
   width: 100% !important;
   height: 100% !important;
-  max-width: 150px !important; //any size
-  max-height: 150px !important; //any size
+  max-width: 150px !important;
+  max-height: 150px !important;
 }
 
 ion-avatar.brand-portrait {
@@ -123,6 +123,6 @@ ion-list {
 
 @media (max-width: 768px) {
   .scrollable-content {
-    padding: 8px; /* Menor padding en pantallas pequeñas */
+    padding: 8px; /* Reduce padding on small screens. */
   }
 }

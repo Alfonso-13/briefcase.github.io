@@ -20,9 +20,19 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:description', content: config.description });
     this.meta.updateTag({ property: 'og:type', content: 'website' });
     this.meta.updateTag({ property: 'og:url', content: config.canonicalUrl });
+    this.meta.updateTag({ name: 'twitter:card', content: 'summary_large_image' });
+    this.meta.updateTag({ name: 'twitter:title', content: config.title });
+    this.meta.updateTag({ name: 'twitter:description', content: config.description });
 
     if (config.image) {
-      this.meta.updateTag({ property: 'og:image', content: config.image });
+      const imageUrl = this.resolveUrl(config.image, config.canonicalUrl);
+      this.meta.updateTag({ property: 'og:image', content: imageUrl });
+      this.meta.updateTag({ name: 'twitter:image', content: imageUrl });
+    }
+
+    if (config.imageAlt) {
+      this.meta.updateTag({ property: 'og:image:alt', content: config.imageAlt });
+      this.meta.updateTag({ name: 'twitter:image:alt', content: config.imageAlt });
     }
 
     let canonical = this.document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
@@ -32,5 +42,13 @@ export class SeoService {
       this.document.head.appendChild(canonical);
     }
     canonical.href = config.canonicalUrl;
+  }
+
+  private resolveUrl(value: string, canonicalUrl: string): string {
+    try {
+      return new URL(value, canonicalUrl || this.document.baseURI).href;
+    } catch {
+      return value;
+    }
   }
 }
